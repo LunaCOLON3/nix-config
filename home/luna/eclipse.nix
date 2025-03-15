@@ -38,6 +38,7 @@
     gh
     gimp
     sops
+    keepassxc
   ];
 
   services.flatpak.packages = [

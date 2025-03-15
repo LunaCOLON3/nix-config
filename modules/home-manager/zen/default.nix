@@ -29,6 +29,7 @@
           stylus
           translate-web-pages
           web-archives
+          keepassxc-browser
         ];
       };
     };
