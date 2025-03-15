@@ -2,8 +2,6 @@
 
   imports = [ inputs.zen-browser.homeManagerModules.zen-browser ];
 
-  home.file.".zen/luna/zen-themes.json".source = ./zen-themes.json;
-
   programs.zen-browser = {
     enable = true;
     profiles = {
