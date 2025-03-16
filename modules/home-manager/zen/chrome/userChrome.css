@@ -11,3 +11,7 @@
 #customization-panelWrapper {
   --panel-arrow-offset: 0px !important;
 }
+
+.titlebar-buttonbox-container {
+  display: none !important;
+}
