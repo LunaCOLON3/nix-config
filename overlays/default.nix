@@ -2,8 +2,8 @@
 
   nur = inputs.nur.overlays.default;
 
-  overlay-unstable = final: prev: {
-    unstable = import inputs.nixpkgs-unstable {
+  stable = final: prev: {
+    stable = import inputs.nixpkgs-stable {
       system = "x86_64-linux";
       config.allowUnfree = true;
     };
