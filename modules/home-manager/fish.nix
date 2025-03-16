@@ -1,4 +1,4 @@
-{ ... }: {
+{ pkgs, ... }: {
   programs.fish = {
     enable = true;
     shellInit = ''
@@ -6,11 +6,15 @@
       set -g theme_nerd_fonts "yes"
       set -g theme_title_display_process "yes"
     '';
+
     shellAbbrs = {
       vi = "nvim";
       vim = "nvim";
     };
 
-    interactiveShellInit = "fastfetch";
+    interactiveShellInit = ''
+      ${pkgs.any-nix-shell}/bin/any-nix-shell fish --info-right | source
+      fastfetch
+    '';
   };
 }

@@ -39,6 +39,7 @@
     gimp
     sops
     keepassxc
+    any-nix-shell
   ];
 
   services.flatpak.packages = [
