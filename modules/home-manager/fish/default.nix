@@ -4,6 +4,7 @@
 
   programs.fish = {
     enable = true;
+
     shellInit = ''
       set -g theme_color_scheme "catppuccin"
       set -g theme_nerd_fonts "yes"
@@ -13,6 +14,13 @@
     shellAbbrs = {
       vi = "nvim";
       vim = "nvim";
+
+      g = "git";
+      c = {
+        command = "git";
+        setCursor = true;
+        expansion = "commit -am \"%\"";
+      };
     };
 
     interactiveShellInit = ''
