@@ -3,7 +3,7 @@
   imports = [
 
     ./catppuccin.nix
-    ./fish.nix
+    ./fish
     ./spotify.nix
     ./neovim.nix
     ./zen
