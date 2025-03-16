@@ -2,6 +2,9 @@
 
   imports = [ inputs.zen-browser.homeManagerModules.zen-browser ];
 
+  home.file.".zen/luna/chrome".source = ./chrome;
+  home.file.".zen/luna/zen-keyboard-shortcuts.json".source = ./zen-keyboard-shortcuts.json;
+
   programs.zen-browser = {
     enable = true;
     profiles = {
