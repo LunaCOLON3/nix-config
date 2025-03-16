@@ -29,11 +29,9 @@
     bottles
     jdk
     qbittorrent
-    (retroarch.override {
-      cores = with libretro; [
-        desmume
-      ];
-    })
+    (retroarch.withCores (cores: with cores; [
+      desmume
+    ]))
     protonup-qt
     gh
     gimp
