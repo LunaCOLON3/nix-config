@@ -8,8 +8,6 @@
     '';
     
     shellAliases = {
-      "vi" = "nvim";
-      "vim" = "nvim";
       "nix develop" = "nix develop --command fish";
     };
 
