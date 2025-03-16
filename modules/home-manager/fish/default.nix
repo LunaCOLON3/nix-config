@@ -17,8 +17,7 @@
 
       g = "git";
       c = {
-        command = "git";
-        setCursor = true;
+        setCursor = "% --command git";
         expansion = "commit -am \"%\"";
       };
     };
