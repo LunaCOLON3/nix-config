@@ -1,4 +1,4 @@
-{...}: {
+{ lib, ... }: {
   programs.fish = {
     enable = true;
     shellInit = ''
@@ -7,9 +7,11 @@
       set -g theme_title_display_process "yes"
     '';
     
-    shellAliases = {
+    shellAliases = lib.mkMerge [{
+      vi = "nvim";
+      vim = "nvim";
       "nix develop" = "nix develop --command fish";
-    };
+    }];
 
     interactiveShellInit = "fastfetch";
   };
