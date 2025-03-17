@@ -41,7 +41,12 @@
     (stable.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
 
-  fonts.fontconfig.enable = true;
+  fonts.fontconfig = {
+    enable = true;
+    defaultFonts = {
+      monospace = [ "JetBrainsMono" ];
+    };
+  };
 
   services.flatpak.packages = [
     {
