@@ -38,7 +38,10 @@
     sops
     keepassxc
     any-nix-shell
+    nerd-fonts.jetbrains-mono
   ];
+
+  fonts.fontconfig.enable = true;
 
   services.flatpak.packages = [
     {
