@@ -19,7 +19,7 @@
     };
 
     interactiveShellInit = ''
-      abbr -a --set-cursor c 'commit -am "%"'
+      abbr -a --set-cursor c "commit -am \"%\""
 
       ${pkgs.any-nix-shell}/bin/any-nix-shell fish | source
       set fish_greeting
