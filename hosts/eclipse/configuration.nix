@@ -42,7 +42,6 @@
     graphics.enable = true;
     bluetooth.enable = true;
     xpadneo.enable = true;
-    pulseaudio.enable = false;
 
     nvidia = {
       modesetting.enable = true;
@@ -84,6 +83,8 @@
     flatpak.enable = true;
     printing.enable = true;
     hardware.openrgb.enable = true;
+
+    pulseaudio.enable = false;
   };
 
   programs = {
