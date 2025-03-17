@@ -113,7 +113,7 @@
   ];
 
   fonts.packages = with pkgs; [
-    nerd-fonts.jet-brains-mono
+    nerd-fonts.jetbrains-mono
   ];
 
   system.stateVersion = "24.11";
