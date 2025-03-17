@@ -16,13 +16,11 @@
       vim = "nvim";
 
       g = "git";
-      c = {
-        setCursor = "%\' --command git\\";
-        expansion = "commit -am \"%\"";
-      };
     };
 
     interactiveShellInit = ''
+      abbr -a --set-cursor c 'commit -am "%"'
+
       ${pkgs.any-nix-shell}/bin/any-nix-shell fish | source
       set fish_greeting
     '';
