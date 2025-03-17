@@ -5,8 +5,10 @@
     settings = {
       background_opacity = "0.85";
     };
-
-    font.package = pkgs.nerd-fonts.jetbrains-mono;
+    font = {
+      name = "JetBrainsMono Nerd Font";
+      package = pkgs.nerd-fonts.jetbrains-mono;
+    };
   };
 
 }
