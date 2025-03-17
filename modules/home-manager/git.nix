@@ -3,7 +3,7 @@
   programs.git = {
     enable = true;
     userName = "LunaCOLON3";
-    userEmail = config.sops.secrets."email".path;
+    userEmail = "lunacolon3@proton.me";
   };
   
 }
