@@ -38,8 +38,7 @@
     sops
     keepassxc
     any-nix-shell
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.symbols-only
+    (stable.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
 
   fonts.fontconfig.enable = true;

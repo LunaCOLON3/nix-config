@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, ... }: {
+{ inputs, config, pkgs, options, ... }: {
 
   imports = [ ../../modules/nixos ./hardware-configuration.nix ];
 
@@ -10,6 +10,13 @@
   };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  nix.nixPath =
+    # Prepend default nixPath values.
+    options.nix.nixPath.default ++
+    # Append our nixpkgs-overlays.
+    [ "nixpkgs-overlays=/etc/nixos/overlays-compat/" ]
+  ;
 
   boot.loader = {
     grub = {
@@ -114,7 +121,7 @@
   ];
 
   fonts.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
+    (stable.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
 
   system.stateVersion = "24.11";
