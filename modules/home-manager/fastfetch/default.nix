@@ -4,7 +4,7 @@
     settings = {
       "$schema" = "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json";
       logo = {
-        source = "/home/luna/Documents/nix-config/assets/nixos-ascii.txt";
+        source = "./nixos-ascii.txt";
         type = "file";
         color = {
           "1" = "magenta";
