@@ -6,9 +6,9 @@
 
       # monitor config
       monitor = [
-        "HDMI-A-1, 1920x1080, 1600x0, 1"
-        "DP-2, 1600x900, 0x180, 1"
-        "DP-1, 900x1600, 3520x0, 1, transform, 1"
+        "HDMI-A-1, 1920x1080, 0x0, 1"
+        "DP-2, 1600x900, -1600x180, 1"
+        "DP-1, 900x1600, 1920x0, 1, transform, 1"
       ];
 
       # default programs
