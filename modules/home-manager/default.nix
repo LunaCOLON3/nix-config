@@ -10,7 +10,7 @@
     ./hyprland.nix
     ./hyprpanel.nix
     ./kitty.nix
-    ./fastfetch
+    ./fastfetch.nix
     ./flatpak.nix
     ./git.nix
     ./rofi
