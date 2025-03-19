@@ -72,7 +72,6 @@
     };
 
     displayManager.sddm.enable = true;
-    desktopManager.plasma6.enable = true;
 
     pipewire = {
       enable = true;
@@ -118,6 +117,7 @@
     gtk3
     virt-viewer
     fuse
+    hyprpolkitagent
   ];
 
   fonts.packages = with pkgs; [
