@@ -4,7 +4,7 @@
 
   qt = {
     enable = true;
-    platformTheme = "qt6ct";
+    platformTheme = "qt5ct";
     style = "kvantum";
   };
 
