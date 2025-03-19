@@ -1,4 +1,6 @@
 { ... }: {
+  
+  catppuccin.kvantum.enable = false;
 
   qt = {
     enable = true;
