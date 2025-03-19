@@ -1,6 +1,6 @@
 { pkgs, ... }: {
 
-  environment.systemPackages = [ pkgs.kdePackages.qt6ct ];
+  environment.systemPackages = [ pkgs.kdePackages.qt6ct pkgs.kdePackages.breeze-icons ];
 
   qt = {
     enable = true;

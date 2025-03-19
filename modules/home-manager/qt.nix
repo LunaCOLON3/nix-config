@@ -2,7 +2,7 @@
   
   catppuccin.kvantum.enable = false;
 
-  home.packages = [ pkgs.kdePackages.qt6ct ];
+  home.packages = [ pkgs.kdePackages.qt6ct pkgs.kdePackages.breeze-icons ];
 
   qt = {
     enable = true;
