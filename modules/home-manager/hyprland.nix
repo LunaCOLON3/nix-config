@@ -29,7 +29,6 @@
         "XCURSOR_THEME,Catppuccin-Mocha-Pink-Cursors"
         "QT_QPA_PLATFORMTHEME,qt6ct"
         "QT_QPA_PLATFORM,wayland;xcb"
-        "QT_STYLE_OVERRIDE"
       ];
 
       general = {
