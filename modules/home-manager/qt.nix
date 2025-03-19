@@ -1,6 +1,8 @@
-{ ... }: {
+{ pkgs, ... }: {
   
   catppuccin.kvantum.enable = false;
+
+  home.packages = [ pkgs.kdePackages.qt6ct ];
 
   qt = {
     enable = true;
