@@ -40,6 +40,7 @@
     any-nix-shell
     (stable.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     lxqt.pcmanfm-qt
+    gvfs
   ];
 
   fonts.fontconfig = {
