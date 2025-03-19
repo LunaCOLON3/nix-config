@@ -14,7 +14,7 @@
       # default programs
       "$mod" = "SUPER";
       "$terminal" = "kitty fish --init-command fastfetch";
-      "$fileManager" = "dolphin";
+      "$fileManager" = "pcmanfm-qt";
       "$menu" = "rofi -show drun";
 
       # startup
