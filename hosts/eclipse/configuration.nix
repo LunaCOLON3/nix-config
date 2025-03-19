@@ -90,6 +90,7 @@
       };
     };
 
+    gvfs.enable = true;
     flatpak.enable = true;
     printing.enable = true;
     hardware.openrgb.enable = true;
@@ -122,6 +123,7 @@
     virt-viewer
     fuse
     hyprpolkitagent
+    lxqt.pcmanfm-qt
   ];
 
   fonts.packages = with pkgs; [
