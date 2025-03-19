@@ -13,7 +13,7 @@
 
       # default programs
       "$mod" = "SUPER";
-      "$terminal" = "kitty --hold fastfetch";
+      "$terminal" = "kitty fish --init-command fastfetch";
       "$fileManager" = "dolphin";
       "$menu" = "rofi -show drun";
 
