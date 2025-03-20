@@ -15,17 +15,18 @@
         "$mod, q, exec, $terminal"
         "$mod, e, exec, $fileManager"
         "$mod, r, exec, $menu"
-        "$mod SHIFT, r, exec, sudo $menu"
         "$mod, v, togglefloating,"
         "$mod, m, exit,"
         "$mod, c, killactive,"
+        "$mod, p, pseudo,"
+        "$mod, t, togglesplit,"
 
         "$mod SHIFT, s, exec, grim -g \"$(slurp)\" - | wl-copy | wl-paste > ~/Pictures/Screenshots/screenshot_$(date +'%s.png')"
 
-        "$mod, left, movefocus, l"
-        "$mod, right, movefocus, r"
-        "$mod, up, movefocus, u"
-        "$mod, down, movefocus, d"
+        "$mod, h, movefocus, l"
+        "$mod, l, movefocus, r"
+        "$mod, k, movefocus, u"
+        "$mod, j, movefocus, d"
       ]
       ++ (
         # workspaces

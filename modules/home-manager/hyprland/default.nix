@@ -28,19 +28,24 @@
       ];
 
       general = {
-        gaps_in = "5";
-        gaps_out = "10";
+        gaps_in = "3";
+        gaps_out = "5";
 
         border_size = "2";
 
         "col.active_border" = "rgba(f5c2e7ee)";
         "col.inactive_border" = "rgba(181825aa)";
 
-        resize_on_border = true;
+        resize_on_border = false;
 
         allow_tearing = false;
 
         layout = "dwindle";
+      };
+
+      dwindle = {
+        pseudotile = true;
+        preserve_split = true;
       };
 
     };
