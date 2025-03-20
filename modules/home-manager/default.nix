@@ -7,8 +7,9 @@
     ./spotify.nix
     ./neovim.nix
     ./zen
-    ./hyprland.nix
+    ./hyprland
     ./hyprpanel.nix
+    ./hyprpaper.nix
     ./kitty.nix
     ./fastfetch.nix
     ./flatpak.nix
