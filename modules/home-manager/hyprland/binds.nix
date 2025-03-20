@@ -18,8 +18,9 @@
         "$mod, v, togglefloating,"
         "$mod, m, exit,"
         "$mod, c, killactive,"
-        "$mod, p, pseudo,"
+        "$mod, p, swapsplit,"
         "$mod, t, togglesplit,"
+
 
         "$mod SHIFT, s, exec, grim -g \"$(slurp)\" - | wl-copy | wl-paste > ~/Pictures/Screenshots/screenshot_$(date +'%s.png')"
 
