@@ -16,7 +16,7 @@
         color = "magenta";
         separator = " : ";
         constants = [
-          "─────────────"
+          "───────────"
         ];
         key = {
           type = "icon";
