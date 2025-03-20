@@ -20,6 +20,7 @@
         "$mod, c, killactive,"
         "$mod, p, swapsplit,"
         "$mod, t, togglesplit,"
+        "$mod SHIFT, movetoroot,"
 
 
         "$mod SHIFT, s, exec, grim -g \"$(slurp)\" - | wl-copy | wl-paste > ~/Pictures/Screenshots/screenshot_$(date +'%s.png')"
