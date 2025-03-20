@@ -35,7 +35,6 @@
           format = "{release}";
         }
         "uptime"
-        "packages"
         "shell"
         {
           type = "display";
@@ -46,7 +45,6 @@
         "wm"
         "wmtheme"
         "theme"
-        "icons"
         "terminal"
         {
           type = "terminalfont";
@@ -56,6 +54,7 @@
         {
           type = "gpu";
           key = "GPU";
+          format = "{name}";
         }
         {
           type = "memory";
