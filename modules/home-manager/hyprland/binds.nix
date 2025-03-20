@@ -5,7 +5,7 @@
 
       # default programs
       "$mod" = "SUPER";
-      "$terminal" = "kitty fish --init-command fastfetch";
+      "$terminal" = "kitty fish --init-command fish_fetch";
       "$fileManager" = "pcmanfm-qt";
       "$menu" = "rofi -show drun"; 
 
