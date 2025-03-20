@@ -20,7 +20,7 @@
         ];
         key = {
           type = "icon";
-          paddingLeft = 2;
+          paddingLeft = 0;
         };
       };
       modules = [
