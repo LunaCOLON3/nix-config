@@ -16,7 +16,7 @@
         color = "magenta";
         separator = " : ";
         constants = [
-          "─────────────────"
+          "─────────────"
         ];
         key = {
           type = "icon";
@@ -26,7 +26,7 @@
       modules = [
         {
           type = "title";
-          format = "┌{$1}───── {#1}{user-name}@{host-name}{#} ─────{$1}┐";
+          format = "┌{$1}───── {#1}{user-name}@{host-name}{#1} ─────{$1}┐";
         }
         "os"
         "host"
