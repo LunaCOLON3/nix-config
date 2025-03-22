@@ -20,15 +20,21 @@
         "$mod, c, killactive,"
         "$mod, p, swapsplit,"
         "$mod, t, togglesplit,"
-        "$mod SHIFT, p, layoutmsg, movetoroot active unstable,"
+        "$mod, p, layoutmsg, movetoroot active unstable,"
 
 
         "$mod SHIFT, s, exec, grim -g \"$(slurp)\" - | wl-copy | wl-paste > ~/Pictures/Screenshots/screenshot_$(date +'%s.png')"
+
 
         "$mod, h, movefocus, l"
         "$mod, l, movefocus, r"
         "$mod, k, movefocus, u"
         "$mod, j, movefocus, d"
+
+        "$mod SHIFT, h, movewindow, l"
+        "$mod SHIFT, l, movewindow, r"
+        "$mod SHIFT, k, movewindow, u"
+        "$mod SHIFT, j, movewindow, d"
       ]
       ++ (
         # workspaces
