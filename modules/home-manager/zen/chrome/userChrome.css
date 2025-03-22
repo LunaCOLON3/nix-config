@@ -1,4 +1,5 @@
 @import url("catppuccin/userChrome.css");
+@import url("no-gaps.css");
 
 :root[zen-single-toolbar="true"] #zen-appcontent-navbar-container {
   max-height: var(--zen-element-separation) !important;
