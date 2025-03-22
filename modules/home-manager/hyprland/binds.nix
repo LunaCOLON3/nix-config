@@ -48,9 +48,17 @@
         )
         9)
       );
+
       bindm = [
         "$mod, mouse:272, movewindow"
         "$mod, mouse:273, resizewindow"
+      ];
+
+      binde = [
+        "$mod ALT, h, resizeactive, -25 0"
+        "$mod ALT, l, resizeactive, 25 0"
+        "$mod ALT, k, resizeactive, 0 -25"
+        "$mod ALT, j, resizeactive, 0 25"
       ];
 
     };
