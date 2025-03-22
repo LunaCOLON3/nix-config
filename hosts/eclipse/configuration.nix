@@ -124,6 +124,7 @@
     fuse
     hyprpolkitagent
     lxqt.pcmanfm-qt
+    kdePackages.ark
   ];
 
   fonts.packages = with pkgs; [
