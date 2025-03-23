@@ -11,6 +11,10 @@
       set -g theme_title_display_process "yes"
     '';
 
+    shellAliases = {
+      icat = "kitten icat";
+    };
+
     shellAbbrs = {
       vi = "nvim";
       vim = "nvim";
@@ -20,6 +24,7 @@
 
     interactiveShellInit = ''
       abbr -a --set-cursor --command git c "commit -am \"%\""
+      abbr -a --command git a "add ."
 
       ${pkgs.any-nix-shell}/bin/any-nix-shell fish | source
       set fish_greeting
