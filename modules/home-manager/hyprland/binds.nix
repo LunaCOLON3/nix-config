@@ -6,7 +6,7 @@
       # default programs
       "$mod" = "SUPER";
       "$terminal" = "kitty fish --init-command fish_fetch";
-      "$fileManager" = "pcmanfm-qt";
+      "$fileManager" = "dolphin";
       "$menu" = "rofi -show drun"; 
 
       # keybinds

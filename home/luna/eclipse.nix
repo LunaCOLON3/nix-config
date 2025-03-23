@@ -39,6 +39,8 @@
     keepassxc
     any-nix-shell
     (stable.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    kdePackages.dolphin
+    kdePackages.ark
   ];
 
   fonts.fontconfig = {
