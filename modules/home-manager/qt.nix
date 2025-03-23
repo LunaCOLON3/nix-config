@@ -2,12 +2,11 @@
   
   catppuccin.kvantum.enable = false;
 
-  home.packages = [ pkgs.kdePackages.qt6ct pkgs.kdePackages.breeze-icons ];
+  home.packages = with pkgs.kdePackages; [ qt6ct breeze-icons qtstyleplugin-kvantum ];
 
   qt = {
     enable = true;
-    platformTheme.name = "qtct";
-    style.name = "kvantum";
+    platformTheme.name = "qt6ct";
   };
 
 }
