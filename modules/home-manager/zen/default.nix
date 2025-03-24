@@ -23,6 +23,14 @@
           };
         };
 
+        settings = {
+          "theme.no_gaps.split.gaps" = false;
+          "theme.no_gaps.split.rounded_corners" = false;
+
+          "theme.no_gaps.single_toolbar.disable_navbar" = true;
+          "theme.no_gaps.split.single_toolbar.disable_navbar" = true;
+        };
+
         extensions = with pkgs.nur.repos.rycee.firefox-addons; [
           ublock-origin
           privacy-badger
