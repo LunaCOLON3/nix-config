@@ -21,7 +21,7 @@
     
     layout = {
       "bar.layouts" = {
-        "0" = {
+        "2" = {
           left = [ "dashboard" "workspaces" "windowtitle" ];
           middle = [ "media" ];
           right = [ "volume" "network" "bluetooth" "systray" "clock" "notifications" ];
@@ -31,7 +31,7 @@
           middle = [ "media" ];
           right = [ "volume" "clock" "notifications" ];
         };
-        "2" = {
+        "0" = {
           left = [ "dashboard" "workspaces" "windowtitle" ];
           middle = [ "media" ];
           right = [ "volume" "systray" "notifications" ];
