@@ -18,15 +18,6 @@
     [ "nixpkgs-overlays=/etc/nixos/overlays-compat/" ]
   ;
 
-  boot.loader = {
-    grub = {
-      enable = true;
-      efiSupport = true;
-      device = "nodev";
-    };
-    efi.canTouchEfiVariables = true;
-  };
-
   networking = {
     hostName = "eclipse";
     networkmanager.enable = true;
