@@ -8,9 +8,9 @@
 
       # monitor config
       monitor = [
-        "HDMI-A-1, 1920x1080, 0x0, 1"
-        "DP-1, 1600x900, 1920x0, 1, transform, 1"
-        "DP-2, 1600x900, -1600x180, 1"
+        "DP-1, 1920x1080, 0x0, 1"
+        "DP-2, 1600x900, 1920x0, 1, transform, 1"
+        "DP-3, 1600x900, -1600x180, 1"
       ];
 
       # startup
