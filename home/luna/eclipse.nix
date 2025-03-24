@@ -41,6 +41,8 @@
     (stable.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     kdePackages.dolphin
     kdePackages.ark
+    vlc
+    btop
   ];
 
   fonts.fontconfig = {
