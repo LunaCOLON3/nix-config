@@ -113,6 +113,7 @@
     virt-viewer
     fuse
     hyprpolkitagent
+    fbset
   ];
 
   fonts.packages = with pkgs; [
