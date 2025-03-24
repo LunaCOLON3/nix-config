@@ -5,7 +5,7 @@
     ./catppuccin.nix
     ./sops.nix
     ./qt.nix
-    ./greetd.nix
+    ./ly.nix
     ./grub.nix
 
   ];
