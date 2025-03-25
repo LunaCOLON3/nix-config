@@ -1,6 +1,6 @@
 { ... }: {
 
-  imports = [ ./binds.nix ];
+  imports = [ ./binds.nix ./rules.nix ];
 
   wayland.windowManager.hyprland = {
     enable = true;
