@@ -67,7 +67,10 @@
     displayManager.sddm = {
       enable = true;
       package = pkgs.kdePackages.sddm;
-      # wayland.enable = true;
+      setupScript = ''
+        xrandr --output DisplayPort-0 --off
+        xrandr --output DisplayPort-1 --off
+      '';
     };
 
     pipewire = {
