@@ -62,11 +62,11 @@
       videoDrivers = [ "nvidia" ];
     };
 
-    displayManager.sddm = {
+    /*displayManager.sddm = {
       enable = true;
       package = pkgs.kdePackages.sddm;
       wayland.enable = true;
-    };
+    };*/
 
     pipewire = {
       enable = true;
