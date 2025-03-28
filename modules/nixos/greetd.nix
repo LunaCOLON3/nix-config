@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-/*
+
   services.greetd = {
     enable = true;
     settings = {
@@ -16,7 +16,5 @@
   environment.etc."greetd/environments".text = ''
     hyprland
   '';
-*/
 
-  services.displayManager.ly.enable = true;
 }
