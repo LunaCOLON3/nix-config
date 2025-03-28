@@ -69,10 +69,10 @@
       package = pkgs.kdePackages.sddm;
     };
 
-    services.xserver.displayManager.setupCommands = ''
-         xrandr --output DisplayPort-2 --mode 1920x1080 --pos 2500x0;
-         xrandr --output DisplayPort-0 --off;
-         xrandr --output DisplayPort-1 --off;
+    xserver.displayManager.setupCommands = ''
+      xrandr --output DisplayPort-2 --mode 1920x1080 --pos 2500x0;
+      xrandr --output DisplayPort-0 --off;
+      xrandr --output DisplayPort-1 --off;
     '';
 
     pipewire = {
