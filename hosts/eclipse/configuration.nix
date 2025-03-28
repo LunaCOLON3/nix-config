@@ -58,6 +58,8 @@
     polkit.enable = true;
   };
 
+  catppuccin.sddm.assertQt6Sddm = true;
+
   services = {
     xserver = {
       enable = true;
@@ -66,7 +68,6 @@
 
     displayManager.sddm = {
       enable = true;
-      package = pkgs.kdePackages.sddm;
     };
 
     xserver.displayManager.setupCommands = ''
