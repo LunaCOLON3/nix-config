@@ -58,7 +58,7 @@
     polkit.enable = true;
   };
 
-  catppuccin.sddm.assertQt6Sddm = true;
+  catppuccin.sddm.enable = false;
 
   services = {
     xserver = {
