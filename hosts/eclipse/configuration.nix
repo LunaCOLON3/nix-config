@@ -36,6 +36,8 @@
     };
   };
 
+  boot.plymouth.enable = true;
+
   hardware = {
     graphics.enable = true;
     bluetooth.enable = true;
