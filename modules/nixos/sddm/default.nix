@@ -1,4 +1,7 @@
-{ pkgs, ... }: {
+{ pkgs, ... }: let
+  
+  cfgFile = ./weston.ini;
+in {
 
   services.displayManager.sddm = {
     enable = true;
@@ -7,7 +10,7 @@
     
     settings = {
       Wayland = {
-        CompositorCommand = "${pkgs.weston}/bin/weston --shell=kiosk -c ${./weston.ini}";
+        CompositorCommand = "${pkgs.weston}/bin/weston --shell=kiosk -c ${cfgFile}";
       };
     };
   };
