@@ -3,7 +3,7 @@
   cfgFile = ./weston.ini;
 in {
 
-  catppuccin.sddm.background = ../../../assets/wallpaper.png;
+  catppuccin.sddm.background = ../../../assets/wallpaper-extrablur.png;
 
   services.displayManager.sddm = {
     enable = true;
