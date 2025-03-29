@@ -62,25 +62,6 @@
     xserver = {
       enable = true;
       videoDrivers = [ "nvidia" ];
-      xrandrHeads=[
-        {
-          output="DP-3";
-          primary=true;
-        }
-        {
-          output="DP-1";
-          monitorConfig=''Option "Enable" "false"'';
-        }
-        {
-          output="DP-2";
-          monitorConfig=''Option "Enable" "false"'';
-        }
-      ];
-    };
-
-    displayManager.sddm = {
-      enable = true;
-      package = pkgs.kdePackages.sddm;
     };
 
     pipewire = {
