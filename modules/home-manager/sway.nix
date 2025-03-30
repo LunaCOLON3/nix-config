@@ -37,7 +37,7 @@ in {
         };
         "DP-2" = {
           pos = "1920 0";
-          transform = "90";
+          transform = "270";
         };
         "DP-1" = {
           pos = "-1600 180";
