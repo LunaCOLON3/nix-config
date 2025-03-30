@@ -15,5 +15,7 @@
     ./rofi
     ./qt.nix
     ./sops.nix
+    ./sway.nix
+
   ];
 }
