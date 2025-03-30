@@ -16,6 +16,7 @@
 
     config = {
       modifier = "Mod4";
+      terminal = "kitty fish --init-command fish_fetch";
 
       gaps = {
         outer = 5;
