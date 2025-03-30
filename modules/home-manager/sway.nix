@@ -1,4 +1,8 @@
-{ pkgs, ... }: {
+{ pkgs, ... }: let
+
+  wallpaper = ../../assets/wallpaper.png;
+
+in {
 
   home.packages = with pkgs; [
     swaybg
@@ -25,7 +29,7 @@
 
       output = {
         "*" = {
-          background = toString ../../assets/wallpaper.png;
+          background = "${wallpaper} fill";
           scale = "1";
         };
         "DP-3" = {
@@ -33,6 +37,7 @@
         };
         "DP-2" = {
           pos = "1920 0";
+          transform = "90";
         };
         "DP-1" = {
           pos = "-1600 180";
