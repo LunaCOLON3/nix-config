@@ -5,7 +5,6 @@
     package = pkgs.swayfx;
     extraOptions = [
       "--unsupported-gpu"
-      "-D noscanout"
     ];
   };
 
