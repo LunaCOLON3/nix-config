@@ -95,6 +95,11 @@
       withUWSM = true;
       xwayland.enable = true;
     };
+
+    sway = {
+      enable = true;
+      package = pkgs.swayfx;
+    };
   };
 
   virtualisation = {
