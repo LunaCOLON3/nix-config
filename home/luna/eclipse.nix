@@ -42,7 +42,6 @@
     kdePackages.dolphin
     kdePackages.ark
     vlc
-    btop
     itch
   ];
 
@@ -59,6 +58,8 @@
       sha256 = "1pj8y1xhiwgbnhrr3yr3ybpfis9slrl73i0b1lc9q89vhip6ym2l";
     }
   ];
+
+  programs.btop.enable = true;
 
   services.syncthing.enable = true;
 
