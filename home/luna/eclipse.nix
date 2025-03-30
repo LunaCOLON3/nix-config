@@ -43,6 +43,7 @@
     kdePackages.ark
     vlc
     btop
+    itch
   ];
 
   fonts.fontconfig = {
