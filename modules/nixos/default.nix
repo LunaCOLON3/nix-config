@@ -7,6 +7,7 @@
     ./qt.nix
     ./grub.nix
     ./sddm
+    ./sway.nix
 
   ];
   
