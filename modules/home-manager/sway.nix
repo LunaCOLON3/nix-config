@@ -16,6 +16,8 @@ in {
   wayland.windowManager.sway = {
     enable = true;
     package = pkgs.swayfx;
+
+    checkConfig = false;
     
     config = {
       modifier = "Mod4";
