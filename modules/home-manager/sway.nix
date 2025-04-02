@@ -48,8 +48,8 @@ in {
       startup = [
         { command = "waybar"; }
         { command = "autotiling"; }
+        { command = "lxqt-policykit-agent"; }
         { command = "systemctl --user start syncthing.service"; }
-        { command = "systemctl --user start polkit-kde-agent-1.service"; }
       ];
 
     };

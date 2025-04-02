@@ -1,7 +1,7 @@
 { pkgs, ... }: {
 
   environment.systemPackages = with pkgs; [
-    kdePackages.polkit-kde-agent-1
+    lxqt.lxqt-policykit
   ];
 
   programs.sway = {
