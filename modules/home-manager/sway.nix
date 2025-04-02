@@ -9,7 +9,6 @@ in {
     autotiling
     swayidle
     swaynotificationcenter
-    kdePackages.polkit-kde-agent-1
   ];
 
   wayland.windowManager.sway = {
@@ -46,6 +45,8 @@ in {
 
       startup = [
         { command = "waybar"; }
+        { command = "autotiling"; }
+        { command = "systemctl --user start syncthing.service"; }
         { command = "systemctl --user start polkit-kde-agent-1.service"; }
       ];
 
