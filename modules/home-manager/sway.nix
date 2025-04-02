@@ -48,7 +48,6 @@ in {
       startup = [
         { command = "waybar"; }
         { command = "autotiling"; }
-        { command = "systemctl --user start syncthing.service"; }
       ];
 
     };
