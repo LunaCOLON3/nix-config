@@ -17,8 +17,6 @@ in {
     enable = true;
     package = pkgs.swayfx;
     
-    checkConfig = false;
-
     config = {
       modifier = "Mod4";
       terminal = "kitty fish --init-command fish_fetch";
@@ -44,9 +42,6 @@ in {
           pos = "-1600 180";
         };
       };
-
-      startup = [
-      ];
 
     };
   };
