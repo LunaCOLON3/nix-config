@@ -48,6 +48,7 @@ in {
       startup = [
         { command = "waybar"; }
         { command = "autotiling"; }
+        { command = "lxqt-policykit-agent"; }
       ];
 
     };
