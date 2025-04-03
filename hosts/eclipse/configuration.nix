@@ -95,6 +95,8 @@
       withUWSM = true;
       xwayland.enable = true;
     };
+
+    uwsm.enable = true;
   };
 
   virtualisation = {
