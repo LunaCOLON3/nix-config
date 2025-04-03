@@ -16,6 +16,7 @@
     ./qt.nix
     ./sops.nix
     ./sway.nix
+    ./waybar.nix
 
   ];
 }
