@@ -5,6 +5,8 @@ in {
 
   catppuccin.sddm.background = ../../../assets/wallpaper-extrablur.png;
 
+  services.displayManager.defaultSession = "sway-uwsm";
+
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
