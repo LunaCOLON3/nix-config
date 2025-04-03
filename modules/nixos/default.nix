@@ -8,6 +8,7 @@
     ./grub.nix
     ./sddm
     ./sway.nix
+    ./polkit.nix
 
   ];
   

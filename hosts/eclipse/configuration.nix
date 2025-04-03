@@ -53,10 +53,7 @@
     };
   };
 
-  security = {
-    rtkit.enable = true;
-    polkit.enable = true;
-  };
+  security.rtkit.enable = true;
 
   services = {
     xserver = {
