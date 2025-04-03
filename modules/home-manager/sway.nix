@@ -7,8 +7,6 @@ in {
   home.packages = with pkgs; [
     swaybg
     autotiling
-    swayidle
-    swaynotificationcenter
   ];
 
   wayland.windowManager.sway = {
@@ -22,6 +20,8 @@ in {
     config = {
       modifier = "Mod4";
       terminal = "kitty fish --init-command fish_fetch";
+
+      bars = [];
 
       gaps = {
         outer = 5;
@@ -44,6 +44,11 @@ in {
           pos = "-1600 180";
         };
       };
+
+      startup = [
+        { command = "waybar"; }
+        { command = "autotiling"; }
+      ];
 
     };
   };
