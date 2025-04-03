@@ -17,6 +17,8 @@ in {
     enable = true;
     package = pkgs.swayfx;
 
+    extraOptions = [ "--unsupported-gpu" ];
+
     checkConfig = false;
     
     config = {
