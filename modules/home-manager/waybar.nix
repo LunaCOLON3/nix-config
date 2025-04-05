@@ -7,7 +7,7 @@
       mainBar = {
         modules-left = [ "sway/workspaces" ];
         modules-center = [ "sway/window" ];
-        modules-right = [ "pulseaudio" ];
+        modules-right = [ "pulseaudio" "network" "bluetooth" ];
 
         margin-top = 8;
         margin-left = 8;
@@ -25,12 +25,38 @@
             "5" = "󰍩";
           };
         };
-        "pulseaudio" = {
+
+        pulseaudio = {
           format = "󰕾 {volume}%";
           format-muted = "󰖁 Muted";
           scroll-step = 5;
           on-click = "${lib.getExe pkgs.lxqt.pavucontrol-qt} -t 3";
           tooltip = false;
+        };
+
+        network = {
+          format = "{ifname}";
+          format-wifi = "{essid} 󰖩";
+          format-ethernet = "";
+          format-disconnected = "disconnected 󰅤";
+          tooltip-format = "{ifname}";
+          tooltip-format-wifi = "{essid} ({signalStrength}%) 󰖩";
+          tooltip-format-disconnected = "Disconnected";
+          on-click = "${lib.getExe pkgs.nm-tray}";
+          max-length = 50;
+          interval = 1;
+        };
+
+        bluetooth = {
+          format = "  {status} ";
+          format-connected = " {device_alias}";
+          format-connected-battery = " {device_alias} {device_battery_percentage}%";
+          tooltip-format = "{controller_alias}\t{controller_address}\n\n{num_connections} connected";
+          tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}";
+          tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
+          tooltip-format-enumerate-connected-battery = "{device_alias}\t{device_address}\t{device_battery_percentage}%";
+
+          on-click = "${pkgs.kdePackages.bluedevil}/bin/bluedevil-wizard";
         };
       };
     };
