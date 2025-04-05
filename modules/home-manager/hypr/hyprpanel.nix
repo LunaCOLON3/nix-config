@@ -6,7 +6,7 @@
     enable = true;
     overlay.enable = true;
 
-    settings.theme = "catppuccin_mocha";
+    settings.theme.name = "catppuccin_mocha";
 
     settings = {
       bar.launcher.icon = "";
