@@ -50,10 +50,13 @@
   };
 
   outputs = {
+    self,
     nixpkgs,
     home-manager,
     ...
   } @ inputs: let
+
+    rootPath = self;
 
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
@@ -63,7 +66,7 @@
 
     nixosConfigurations = {
       eclipse = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
+        specialArgs = {inherit inputs rootPath;};
         modules = [ ./hosts/eclipse/configuration.nix ];
       };
     };
@@ -71,7 +74,7 @@
     homeConfigurations = {
       "luna@eclipse" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = { inherit inputs; };
+        extraSpecialArgs = { inherit inputs rootPath; };
         modules = [ ./home/luna/eclipse.nix ];
       };
     };
