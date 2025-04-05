@@ -1,8 +1,8 @@
-{ lib, config, inputs, pkgs, ... }: let
+{ lib, config, inputs, pkgs, rootPath, ... }: let
 
   inherit (inputs.self.lib.sway) mkDirectionKeys mkExec mkWorkspaceKeys;
 
-  wallpaper = ../../assets/wallpaper.png;
+  wallpaper = rootPath + /assets/wallpaper.png;
 
 in {
 
