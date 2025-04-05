@@ -9,6 +9,7 @@ in {
   home.packages = with pkgs; [
     swaybg
     autotiling
+    lxqt.pavucontrol-qt
   ];
 
   services.mako.enable = true;
@@ -51,7 +52,6 @@ in {
       };
 
       startup = [
-        { command = "waybar"; }
         { command = "autotiling"; }
       ];
 
