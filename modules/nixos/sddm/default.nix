@@ -1,9 +1,9 @@
-{ pkgs, ... }: let
+{ rootPath, pkgs, ... }: let
 
   cfgFile = ./weston.ini;
 in {
 
-  catppuccin.sddm.background = ../../../assets/wallpaper-extrablur.png;
+  catppuccin.sddm.background = rootPath + /assets/wallpaper-extrablur.png;
 
   services.displayManager.defaultSession = "sway-uwsm";
 
