@@ -13,6 +13,8 @@
         margin-left = 8;
         margin-right = 8;
 
+        spacing = 8;
+
         "sway/workspaces" = {
           disable-scroll = true;
           all-outputs = false;
@@ -36,11 +38,11 @@
 
         network = {
           format = "{ifname}";
-          format-wifi = "{essid} 󰖩";
+          format-wifi = "󰖩 {essid}";
           format-ethernet = "";
-          format-disconnected = "disconnected 󰅤";
+          format-disconnected = "󰅤 disconnected";
           tooltip-format = "{ifname}";
-          tooltip-format-wifi = "{essid} ({signalStrength}%) 󰖩";
+          tooltip-format-wifi = "󰖩 {essid} ({signalStrength}%)";
           tooltip-format-disconnected = "Disconnected";
           on-click = "${lib.getExe pkgs.nm-tray}";
           max-length = 50;
@@ -48,7 +50,7 @@
         };
 
         bluetooth = {
-          format = "  {status} ";
+          format = " {status} ";
           format-connected = " {device_alias}";
           format-connected-battery = " {device_alias} {device_battery_percentage}%";
           tooltip-format = "{controller_alias}\t{controller_address}\n\n{num_connections} connected";
@@ -72,6 +74,11 @@
         border: 2px solid alpha(@crust, 0.3);
       }
 
+      .modules-left, .modules-center, .modules-right {
+        margin-right: 8px;
+        margin-left: 8px;
+      }
+
       #workspaces {
         margin-left: 0;
       }
@@ -92,10 +99,6 @@
       #workspaces button:hover {
         background-image: none;
         background-color: transparent;
-      }
-
-      .modules-right {
-        margin-right: 8px;
       }
     '';
   };
