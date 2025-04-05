@@ -9,6 +9,7 @@ in {
   home.packages = with pkgs; [
     swaybg
     autotiling
+    mako
   ];
 
   wayland.windowManager.sway = {
@@ -49,6 +50,7 @@ in {
       };
 
       startup = [
+        { command = "mako"; }
         { command = "waybar"; }
         { command = "autotiling"; }
       ];
