@@ -11,7 +11,7 @@ in {
     autotiling
   ];
 
-  services.mako.enable = true;
+  services.swaync.enable = true;
 
   wayland.windowManager.sway = {
     enable = true;
