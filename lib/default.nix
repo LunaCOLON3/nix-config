@@ -1,0 +1,5 @@
+{
+
+  sway = import ./sway.nix;
+
+}

@@ -1,4 +1,6 @@
-{ pkgs, ... }: let
+{ lib, config, inputs, pkgs, ... }: let
+
+  inherit (inputs.self.lib.sway) mkDirectionKeys mkExec mkWorkspaceKeys;
 
   wallpaper = ../../assets/wallpaper.png;
 
@@ -20,6 +22,7 @@ in {
     config = {
       modifier = "Mod4";
       terminal = "kitty fish --init-command fish_fetch";
+      menu = "${lib.getExe pkgs.rofi-wayland} -show drun";
 
       bars = [];
 
@@ -50,6 +53,45 @@ in {
         { command = "autotiling"; }
       ];
 
+      keybindings = let
+        swayCfg = config.wayland.windowManager.sway.config;
+
+        mod = swayCfg.modifier;
+      in
+        lib.mkMerge (
+          [
+            (mkExec "${mod}+q" swayCfg.terminal)
+            (mkExec "${mod}+r" swayCfg.menu)
+            (mkExec "${mod}+e" "dolphin")
+            (mkExec "${mod}+f" "zen")
+          ]
+          ++ (
+            map (mkWorkspaceKeys mod) ["1" "2" "3" "4" "5" "6" "7" "8" "9"]
+          )
+          ++ (
+            lib.mapAttrsToList (mkDirectionKeys mod) {
+              ${swayCfg.left} = "left";
+              ${swayCfg.right} = "right";
+              ${swayCfg.up} = "up";
+              ${swayCfg.down} = "down";
+              "Left" = "left";
+              "Right" = "right";
+              "Up" = "up";
+              "Down" = "down";
+            }
+          )
+          ++ (lib.singleton {
+            "${mod}+c" = "kill";
+
+            "${mod}+t" = "layout toggle split";
+
+            "${mod}+Shift+f" = "fullscreen toggle";
+
+            "${mod}+v" = "floating toggle";
+
+            "${mod}+p" = "focus parent";
+          })
+        );
     };
   };
 
