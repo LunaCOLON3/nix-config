@@ -9,7 +9,6 @@ in {
   home.packages = with pkgs; [
     swaybg
     autotiling
-    lxqt.pavucontrol-qt
   ];
 
   services.mako.enable = true;
