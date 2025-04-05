@@ -7,7 +7,7 @@
       mainBar = {
         modules-left = [ "sway/workspaces" ];
         modules-center = [ "sway/window" ];
-        modules-right = [ "pulseaudio" "network" "bluetooth" ];
+        modules-right = [ "pulseaudio" "network" "bluetooth" "custom/notification" ];
 
         margin-top = 8;
         margin-left = 8;
@@ -59,6 +59,27 @@
           tooltip-format-enumerate-connected-battery = "{device_alias}\t{device_address}\t{device_battery_percentage}%";
 
           on-click = "${pkgs.kdePackages.bluedevil}/bin/bluedevil-wizard";
+        };
+
+        "custom/notification" = {
+          tooltip = false;
+          format = "{icon}";
+          format-icons = {
+            notification = " <span foreground='red'><sup></sup></span>";
+            none = " ";
+            dnd-notification = " <span foreground='red'><sup></sup></span>";
+            dnd-none = " ";
+            inhibited-notification = " <span foreground='red'><sup></sup></span>";
+            inhibited-none = " ";
+            dnd-inhibited-notification = " <span foreground='red'><sup></sup></span>";
+            dnd-inhibited-none = " ";
+          };
+          return-type = "json";
+          exec-if = "which ${pkgs.swaynotificationcenter}/bin/swaync-client";
+          exec = "${pkgs.swaynotificationcenter}/bin/swaync-client -swb";
+          on-click = "${pkgs.swaynotificationcenter}/bin/swaync-client -t -sw";
+          on-click-right = "${pkgs.swaynotificationcenter}/bin/swaync-client -d -sw";
+          escape = true;
         };
       };
     };
