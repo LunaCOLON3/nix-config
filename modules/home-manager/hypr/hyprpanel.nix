@@ -19,7 +19,7 @@
       theme.font.size = "1rem";
     };
     
-    layout = {
+    settings.layout = {
       "bar.layouts" = {
         "2" = {
           left = [ "dashboard" "workspaces" "windowtitle" ];
