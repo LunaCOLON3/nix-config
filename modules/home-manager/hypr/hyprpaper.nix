@@ -1,14 +1,16 @@
-{ ... }: {
+{ rootPath, ... }: let
+  wallpaper = rootPath + /assets/wallpaper.png;
+in {
 
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = "/home/luna/Documents/nix-config/assets/wallpaper.png";
+      preload = wallpaper;
 
       wallpaper = [
-        "DP-1,/home/luna/Documents/nix-config/assets/wallpaper.png"
-        "DP-2,/home/luna/Documents/nix-config/assets/wallpaper.png"
-        "DP-3,/home/luna/Documents/nix-config/assets/wallpaper.png"
+        "DP-1,${wallpaper}"
+        "DP-2,${wallpaper}"
+        "DP-3,${wallpaper}"
       ];
     };
   };
