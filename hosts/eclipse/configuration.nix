@@ -1,9 +1,9 @@
-{ inputs, config, pkgs, options, ... }: {
+{ inputs, config, pkgs, options, rootPath, ... }: {
 
-  imports = [ ../../modules/nixos ./hardware-configuration.nix ];
+  imports = [ (rootPath + /modules/nixos) ./hardware-configuration.nix ];
 
   nixpkgs = {
-    overlays = builtins.attrValues (import ../../overlays {inherit inputs;});
+    overlays = builtins.attrValues (import (rootPath + /overlays) {inherit inputs;});
     config = {
       allowUnfree = true;
     };

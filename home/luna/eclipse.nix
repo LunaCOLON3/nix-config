@@ -1,9 +1,9 @@
-{ inputs, pkgs, ... }: {
+{ inputs, pkgs, rootPath, ... }: {
 
-  imports = [ ../../modules/home-manager ];
+  imports = [ (rootPath + /modules/home-manager) ];
 
   nixpkgs = {
-    overlays = builtins.attrValues (import ../../overlays {inherit inputs;});
+    overlays = builtins.attrValues (import (rootPath + /overlays) {inherit inputs;});
     config = {
       allowUnfree = true;
     };
