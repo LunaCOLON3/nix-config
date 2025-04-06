@@ -1,6 +1,6 @@
 { inputs, pkgs, rootPath, ... }: {
 
-  imports = [ (rootPath + /modules/home-manager) ];
+  imports = [ (rootPath + /modules/home-manager) inputs.nix-flatpak.homeManagerModules.nix-flatpak ];
 
   nixpkgs = {
     overlays = builtins.attrValues (import (rootPath + /overlays) {inherit inputs;});
