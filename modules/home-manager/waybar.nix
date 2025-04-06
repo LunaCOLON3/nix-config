@@ -12,7 +12,7 @@
       mainBar = {
         modules-left = [ "sway/workspaces" "sway/window" ];
         modules-center = [ "clock" ];
-        modules-right = [ "pulseaudio" "network" "bluetooth" "custom/notification" ];
+        modules-right = [ "pulseaudio" "network" "bluetooth" "clock#date" "custom/notification" ];
 
         margin-top = 8;
         margin-left = 8;
@@ -71,6 +71,11 @@
           interval = 1;
           locale = "en_US.UTF-8";
           timezone = "America/New_York";
+        };
+
+        "clock#date" = {
+          format = "{:%a, %b %d, %Y}";
+          interval = 1;
         };
 
         "custom/notification" = {
