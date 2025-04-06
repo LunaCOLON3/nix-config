@@ -10,8 +10,8 @@
 
     settings = {
       mainBar = {
-        modules-left = [ "sway/workspaces" ];
-        modules-center = [ "sway/window" ];
+        modules-left = [ "sway/workspaces" "sway/window" ];
+        modules-center = [ "clock" ];
         modules-right = [ "pulseaudio" "network" "bluetooth" "custom/notification" ];
 
         margin-top = 8;
@@ -64,6 +64,11 @@
           tooltip-format-enumerate-connected-battery = "{device_alias}\t{device_address}\t{device_battery_percentage}%";
 
           on-click = "${pkgs.kdePackages.bluedevil}/bin/bluedevil-wizard";
+        };
+
+        clock = {
+          format = "{:%T}";
+          interval = 1;
         };
 
         "custom/notification" = {
