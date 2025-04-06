@@ -70,7 +70,7 @@
           format = "{:%I:%M %p}";
           interval = 1;
           locale = "en_US.UTF-8";
-          timezone = "America/New_York";
+          timezone = "America/Los_Angeles";
         };
 
         "clock#date" = {
