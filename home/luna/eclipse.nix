@@ -1,6 +1,6 @@
 { inputs, pkgs, rootPath, ... }: {
 
-  imports = [ (rootPath + /modules/home-manager) inputs.nix-flatpak.homeManagerModules.nix-flatpak ];
+  imports = [ (rootPath + /modules/home-manager) ];
 
   nixpkgs = {
     overlays = builtins.attrValues (import (rootPath + /overlays) {inherit inputs;});
@@ -52,15 +52,6 @@
       monospace = [ "JetBrainsMono" ];
     };
   };
-
-  services.flatpak.packages = [
-    {
-      flatpakref = "https://sober.vinegarhq.org/sober.flatpakref";
-      sha256 = "1pj8y1xhiwgbnhrr3yr3ybpfis9slrl73i0b1lc9q89vhip6ym2l";
-    }
-
-    "com.usebottles.bottles"
-  ];
 
   programs.btop.enable = true;
 
