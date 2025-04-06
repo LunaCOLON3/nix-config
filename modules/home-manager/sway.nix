@@ -41,6 +41,12 @@ in {
       floating = {
         border = 0;
         titlebar = true;
+
+        criteria = [
+          { title = "Add Bluetooth Device"; }
+          { title = "Volume Control"; }
+          { title = "Picture-in-Picture"; }
+        ];
       };
 
       output = {
