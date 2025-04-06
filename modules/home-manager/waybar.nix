@@ -43,7 +43,7 @@
 
         network = {
           format = "{ifname}";
-          format-wifi = "󰖩 {essid}";
+          format-wifi = "󰖩  {essid}";
           format-ethernet = "";
           format-disconnected = "󰅤 disconnected";
           tooltip-format = "{ifname}";
@@ -55,8 +55,8 @@
         };
 
         bluetooth = {
-          format = "󰂯";
-          format-off = "󰂲";
+          format = "󰂯 ";
+          format-off = "󰂲 ";
           format-connected = "󰂯 {device_alias}";
           format-connected-battery = "󰂯 {device_alias} {device_battery_percentage}%";
           tooltip-format = "{controller_alias}\t{controller_address}\n\n{num_connections} connected";
