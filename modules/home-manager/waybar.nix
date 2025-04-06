@@ -56,9 +56,8 @@
 
         bluetooth = {
           format = "";
-          format-off = "<span strikethrough=true ></span>";
-          format-connected = "󰂯 {device_alias}";
-          format-connected-battery = "󰂯 {device_alias} {device_battery_percentage}%";
+          format-connected = " {device_alias}";
+          format-connected-battery = " {device_alias} {device_battery_percentage}%";
           tooltip-format = "{controller_alias}\t{controller_address}\n\n{num_connections} connected";
           tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}";
           tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
@@ -101,7 +100,7 @@
       * {
         color: @text;
         font-family: Noto Sans;
-        font-size: 16;
+        font-size: 15;
       }
 
       window#waybar {
