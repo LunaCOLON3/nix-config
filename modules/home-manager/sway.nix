@@ -33,6 +33,12 @@ in {
         inner = 3;
       };
 
+      fonts = {
+        names = [ "Roboto" ];
+        style = "Regular";
+        size = 11.0;
+      };
+
       window = {
         border = 2;
         titlebar = false;
@@ -40,11 +46,11 @@ in {
         commands = [
           {
             criteria.title = "Volume Control";
-            command = "floating enable; sticky enable; resize set 800 800; border normal 0";
+            command = "floating enable; sticky enable; resize set 500 500; border normal 0";
           }
           {
             criteria.title = "Add Bluetooth Device";
-            command = "floating enable; sticky enable; resize set 800 800; border normal 0";
+            command = "floating enable; sticky enable; resize set 500 500; border normal 0";
           }
           {
             criteria.title = "Picture-in-Picture";
@@ -113,6 +119,7 @@ in {
             "${mod}+p" = "focus parent";
           })
         );
+
       colors = {
         background = "$base";
 
