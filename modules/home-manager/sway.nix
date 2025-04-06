@@ -91,6 +91,8 @@ in {
             (mkExec "${mod}+r" swayCfg.menu)
             (mkExec "${mod}+e" "dolphin")
             (mkExec "${mod}+f" "zen")
+
+            (mkExec "${mod}+Shift+s" "grim -g \"$(slurp)\" - | wl-copy | wl-paste > ~/Pictures/Screenshots/screenshot_$(date +'%s.png')")
           ]
           ++ (
             map (mkWorkspaceKeys mod) ["1" "2" "3" "4" "5" "6" "7" "8" "9"]
