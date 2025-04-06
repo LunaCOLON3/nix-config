@@ -36,16 +36,20 @@ in {
       window = {
         border = 2;
         titlebar = false;
-      };
 
-      floating = {
-        border = 0;
-        titlebar = true;
-
-        criteria = [
-          { title = "Add Bluetooth Device"; }
-          { title = "Volume Control"; }
-          { title = "Picture-in-Picture"; }
+        commands = [
+          {
+            criteria.title = "Volume Control";
+            command = "floating enable; sticky enable; resize set 800 800; border normal 0";
+          }
+          {
+            criteria.title = "Add Bluetooth Device";
+            command = "floating enable; sticky enable; resize set 800 800; border normal 0";
+          }
+          {
+            criteria.title = "Picture-in-Picture";
+            command = "floating enable; sticky enable";
+          }
         ];
       };
 
