@@ -99,7 +99,7 @@
     style = ''
       * {
         color: @text;
-        font-family: JetBrainsMonoNL Nerd Font;
+        font-family: Noto Sans;
       }
 
       window#waybar {

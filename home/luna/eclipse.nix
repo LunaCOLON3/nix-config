@@ -43,11 +43,13 @@
     kdePackages.ark
     vlc
     itch
+    noto-fonts
   ];
 
   fonts.fontconfig = {
     enable = true;
     defaultFonts = {
+      sansSerif = [ "Noto Sans" ];
       monospace = [ "JetBrainsMono" ];
     };
   };
