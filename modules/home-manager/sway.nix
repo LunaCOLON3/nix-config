@@ -33,6 +33,16 @@ in {
         inner = 3;
       };
 
+      window = {
+        border = 2;
+        titlebar = false;
+      };
+
+      floating = {
+        border = 0;
+        titlebar = true;
+      };
+
       output = {
         "*" = {
           background = "${wallpaper} fill";
