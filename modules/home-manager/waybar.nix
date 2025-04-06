@@ -101,7 +101,7 @@
       * {
         color: @text;
         font-family: Noto Sans;
-        font-size: 13;
+        font-size: 16;
       }
 
       window#waybar {
