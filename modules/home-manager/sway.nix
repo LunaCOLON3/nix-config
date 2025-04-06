@@ -93,6 +93,49 @@ in {
             "${mod}+p" = "focus parent";
           })
         );
+      colors = {
+        background = "$base";
+
+        focused = {
+          childBorder = "$pink";
+          background = "$pink";
+          text = "$mantle";
+          indicator = "#b4befe80";
+          border = "$pink";
+        };
+
+        focusedInactive = {
+          childBorder = "$mantle";
+          background = "$mantle";
+          text = "$text";
+          indicator = "#b4befe80";
+          border = "$mantle";
+        };
+
+        unfocused = {
+          childBorder = "$mantle";
+          background = "$mantle";
+          text = "$text";
+          indicator = "#b4befe80";
+          border = "$mantle";
+        };
+
+        urgent = {
+          childBorder = "$mauve";
+          background = "$mauve";
+          text = "$mantle";
+          indicator = "#b4befe80";
+          border = "$mauve";
+        };
+
+        placeholder = {
+          childBorder = "$mantle";
+          background = "$mantle";
+          text = "$text";
+          indicator = "#b4befe80";
+          border = "$mantle";
+        };
+      };
     };
   };
 
