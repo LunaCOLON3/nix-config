@@ -110,7 +110,7 @@ in {
           childBorder = "$pink";
           background = "$pink";
           text = "$mantle";
-          indicator = "#b4befe80";
+          indicator = "$pink";
           border = "$pink";
         };
 
@@ -118,7 +118,7 @@ in {
           childBorder = "$mantle";
           background = "$mantle";
           text = "$text";
-          indicator = "#b4befe80";
+          indicator = "$mantle";
           border = "$mantle";
         };
 
@@ -126,7 +126,7 @@ in {
           childBorder = "$mantle";
           background = "$mantle";
           text = "$text";
-          indicator = "#b4befe80";
+          indicator = "$mantle";
           border = "$mantle";
         };
 
@@ -134,7 +134,7 @@ in {
           childBorder = "$mauve";
           background = "$mauve";
           text = "$mantle";
-          indicator = "#b4befe80";
+          indicator = "$mauve";
           border = "$mauve";
         };
 
@@ -142,7 +142,7 @@ in {
           childBorder = "$mantle";
           background = "$mantle";
           text = "$text";
-          indicator = "#b4befe80";
+          indicator = "$mantle";
           border = "$mantle";
         };
       };
