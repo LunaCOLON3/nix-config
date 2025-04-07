@@ -101,7 +101,7 @@
           "custom/media" = {
             format = "{icon} {}";
             return-type = "json";
-            max-length = 25;
+            max-length = 40;
             format-icons = {
               spotify = " ";
               default = " ";
