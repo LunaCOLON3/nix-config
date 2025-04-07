@@ -3,8 +3,6 @@
   programs.waybar = {
     enable = true;
 
-    package = pkgs.waybar.override { withMediaPlayer = true; };
-
     systemd = {
       enable = true;
       target = "graphical-session.target";
