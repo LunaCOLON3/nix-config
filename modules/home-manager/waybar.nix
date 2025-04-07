@@ -3,6 +3,8 @@
   programs.waybar = {
     enable = true;
 
+    package = pkgs.waybar.override { withMediaPlayer = true; };
+
     systemd = {
       enable = true;
       target = "graphical-session.target";
@@ -11,7 +13,7 @@
     settings = {
       mainBar = {
         modules-left = [ "sway/workspaces" "sway/window" ];
-        modules-center = [ "clock" ];
+        modules-center = [ "clock" "custom/media" ];
         modules-right = [ "pulseaudio" "network" "bluetooth" "clock#date" "custom/notification" ];
 
         margin-top = 8;
@@ -97,6 +99,19 @@
           on-click = "${pkgs.swaynotificationcenter}/bin/swaync-client -t -sw";
           on-click-right = "${pkgs.swaynotificationcenter}/bin/swaync-client -d -sw";
           escape = true;
+
+          "custom/media" = {
+            format = "{icon} {}";
+            return-type = "json";
+            max-length = 25;
+            format-icons = {
+              spotify = " ";
+              default = " ";
+            };
+            escape = true;
+            on-click = "playerctl --player='spotify,any' play-pause";
+            exec = "waybar-mediaplayer.py --player spotify 2> /dev/null";
+          };
         };
       };
     };
