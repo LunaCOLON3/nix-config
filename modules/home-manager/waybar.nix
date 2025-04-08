@@ -97,23 +97,23 @@
           on-click = "${pkgs.swaynotificationcenter}/bin/swaync-client -t -sw";
           on-click-right = "${pkgs.swaynotificationcenter}/bin/swaync-client -d -sw";
           escape = true;
+        };
 
-          "custom/media" = {
-            format = "{icon} {}";
-            format-icons = {
-              spotify = " ";
-              default = " ";
-            };
-            escape= true;
-            return-type = "json";
-            max-length = 40;
-            on-click = "playerctl play-pause";
-            on-click-right = "playerctl stop";
-            smooth-scrolling-threshold = 10;
-            on-scroll-up = "playerctl next";
-            on-scroll-down = "playerctl previous";
-            exec = "waybar-mediaplayer.py 2> /dev/null";
+        "custom/media" = {
+          format = "{icon} {}";
+          format-icons = {
+            spotify = " ";
+            default = " ";
           };
+          escape= true;
+          return-type = "json";
+          max-length = 40;
+          on-click = "playerctl play-pause";
+          on-click-right = "playerctl stop";
+          smooth-scrolling-threshold = 10;
+          on-scroll-up = "playerctl next";
+          on-scroll-down = "playerctl previous";
+          exec = "waybar-mediaplayer.py 2> /dev/null";
         };
       };
     };
