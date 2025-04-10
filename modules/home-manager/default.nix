@@ -17,6 +17,7 @@
     ./sops.nix
     ./sway.nix
     ./waybar.nix
+    ./feh.nix
 
   ];
 }
