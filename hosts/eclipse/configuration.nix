@@ -108,6 +108,7 @@
     fuse
     hyprpolkitagent
     fbset
+    kdePackages.partitionmanager
   ];
 
   fonts.packages = with pkgs; [
