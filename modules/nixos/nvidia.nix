@@ -6,7 +6,7 @@ in {
 
   options.modules.nvidia = { enable = lib.mkEnableOption "NVIDIA GPU Drivers"; };
 
-  config = lib.mkIf cfg.enable = {
+  config = lib.mkIf cfg.enable {
     services.xserver.videoDrivers = [ "nvidia" ];
 
     hardware.nvidia = {

@@ -6,7 +6,7 @@ in {
 
   options.modules.virtualization = { enable = lib.mkEnableOption "Virtualization"; };
 
-  config = lib.mkIf cfg.enable = {
+  config = lib.mkIf cfg.enable {
 
     programs.virt-manager.enable =  true;
 
