@@ -3,8 +3,6 @@
   imports = [ ../../modules/nixos ./hardware-configuration.nix ];
 
   modules = {
-    nvidia.enable = true;
-    virtualization.enable = true;
   };
 
   nixpkgs = {
@@ -24,7 +22,7 @@
   ;
 
   networking = {
-    hostName = "eclipse";
+    hostName = "phobos";
     networkmanager.enable = true;
   };
 
@@ -80,7 +78,6 @@
     steam.enable = true;
     fish.enable = true;
     nix-ld.enable = true;
-    virt-manager.enable = true;
     
     hyprland = {
       enable = true;

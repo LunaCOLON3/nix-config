@@ -66,6 +66,11 @@
         specialArgs = {inherit inputs;};
         modules = [ ./hosts/eclipse/configuration.nix ];
       };
+
+      phobos = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [ ./hosts/phobos/configuration.nix ];
+      };
     };
 
     homeConfigurations = {
@@ -73,6 +78,11 @@
         inherit pkgs;
         extraSpecialArgs = { inherit inputs; };
         modules = [ ./home/luna/eclipse.nix ];
+      };
+      "luna@phobos" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = { inherit inputs; };
+        modules = [ ./home/luna/phobos.nix ];
       };
     };
 
