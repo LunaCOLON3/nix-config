@@ -1,4 +1,4 @@
-{ config, ... }: let
+{ config, lib, ... }: let
   
   cfg = config.modules.desktop;
 
