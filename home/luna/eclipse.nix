@@ -59,6 +59,20 @@
     }
   ];
 
+  wayland.windowManager.sway.config.output = {
+    "DP-3" = {
+      pos = "0 0";
+    };
+    "DP-2" = {
+      pos = "1920 0";
+      transform = "270";
+    };
+    "DP-1" = {
+      pos = "-1600 180";
+    };
+  };
+
+
   programs.btop.enable = true;
 
   services.syncthing.enable = true;
