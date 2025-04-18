@@ -1,9 +1,9 @@
-{ inputs, pkgs, rootPath, ... }: {
+{ inputs, pkgs, ... }: {
 
-  imports = [ (rootPath + /modules/home-manager) ];
+  imports = [ ../../modules/home-manager ];
 
   nixpkgs = {
-    overlays = builtins.attrValues (import (rootPath + /overlays) {inherit inputs;});
+    overlays = builtins.attrValues (import ../../overlays {inherit inputs;});
     config = {
       allowUnfree = true;
     };
@@ -17,7 +17,6 @@
   home.packages = with pkgs; [
     vesktop
     prismlauncher
-    obs-studio
     blueman
     protonvpn-gui
     wget
@@ -26,11 +25,9 @@
     grim
     slurp
     google-chrome
+    bottles
     jdk
     qbittorrent
-    (retroarch.withCores (cores: with cores; [
-      desmume
-    ]))
     protonup-qt
     gh
     gimp
@@ -42,29 +39,21 @@
     kdePackages.ark
     vlc
     itch
-    noto-fonts
   ];
 
   fonts.fontconfig = {
     enable = true;
     defaultFonts = {
-      sansSerif = [ "Noto Sans" ];
       monospace = [ "JetBrainsMono" ];
     };
   };
 
-  wayland.windowManager.sway.config.output = {
-    "DP-3" = {
-      pos = "0 0";
-    };
-    "DP-2" = {
-      pos = "1920 0";
-      transform = "270";
-    };
-    "DP-1" = {
-      pos = "-1600 180";
-    };
-  };
+  services.flatpak.packages = [
+    {
+      flatpakref = "https://sober.vinegarhq.org/sober.flatpakref";
+      sha256 = "1pj8y1xhiwgbnhrr3yr3ybpfis9slrl73i0b1lc9q89vhip6ym2l";
+    }
+  ];
 
   programs.btop.enable = true;
 

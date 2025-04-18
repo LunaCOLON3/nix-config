@@ -1,14 +1,12 @@
-{ inputs, config, pkgs, options, rootPath, ... }: {
+{ inputs, config, pkgs, options, ... }: {
 
-  imports = [ (rootPath + /modules/nixos) ./hardware-configuration.nix ];
+  imports = [ ../../modules/nixos ./hardware-configuration.nix ];
 
   modules = {
-    nvidia.enable = true;
-    virtualization.enable = true;
   };
 
   nixpkgs = {
-    overlays = builtins.attrValues (import (rootPath + /overlays) {inherit inputs;});
+    overlays = builtins.attrValues (import ../../overlays {inherit inputs;});
     config = {
       allowUnfree = true;
     };
@@ -24,7 +22,7 @@
   ;
 
   networking = {
-    hostName = "eclipse";
+    hostName = "phobos";
     networkmanager.enable = true;
   };
 
@@ -80,7 +78,6 @@
     steam.enable = true;
     fish.enable = true;
     nix-ld.enable = true;
-    virt-manager.enable = true;
     
     hyprland = {
       enable = true;
@@ -96,7 +93,6 @@
     fuse
     hyprpolkitagent
     fbset
-    kdePackages.partitionmanager
   ];
 
   fonts.packages = with pkgs; [
