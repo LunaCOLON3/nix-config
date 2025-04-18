@@ -55,14 +55,14 @@
 
   wayland.windowManager.sway.config.output = {
     "DP-3" = {
-      pos = "0 0";
+      pos = "1600 0";
     };
     "DP-2" = {
-      pos = "1920 0";
+      pos = "3520 0";
       transform = "270";
     };
     "DP-1" = {
-      pos = "-1600 180";
+      pos = "0 180";
     };
   };
 
