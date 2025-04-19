@@ -97,6 +97,7 @@
     hyprpolkitagent
     fbset
     kdePackages.partitionmanager
+    kdePackages.isoimagewriter
   ];
 
   fonts.packages = with pkgs; [
