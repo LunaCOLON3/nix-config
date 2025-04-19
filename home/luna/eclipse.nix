@@ -40,6 +40,7 @@
     (stable.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     kdePackages.dolphin
     kdePackages.ark
+    kdePackages.kdenlive
     vlc
     itch
     noto-fonts
