@@ -44,6 +44,7 @@
     vlc
     itch
     noto-fonts
+    inkscape
   ];
 
   fonts.fontconfig = {
