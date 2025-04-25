@@ -111,6 +111,14 @@
     kdePackages.partitionmanager
     kdePackages.isoimagewriter
     waywall
+    (glfw-wayland-minecraft.overrideAttrs (old: {
+          patches = [
+            (fetchpatch2 {
+              url = "https://raw.githubusercontent.com/tesselslate/waywall/012851ff6ac4ed7b74dc41683f275b8384ce36a7/doc/assets/glfw.patch";
+              hash = "sha256-2PYmEUJVO9WrTbvnZp+RgJ9tTIqB9q4QVeABplH0tQY=";
+            })
+          ];
+        }))
   ];
 
   fonts.packages = with pkgs; [
