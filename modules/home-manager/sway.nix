@@ -53,10 +53,19 @@ in {
             command = "floating enable; sticky enable; resize set 500 500; border normal 0";
           }
           {
+            criteria.title = "Network Connections";
+            command = "floating enable; sticky enable; resize set 500 500; border normal 0";
+          }
+          {
             criteria.title = "Picture-in-Picture";
             command = "floating enable; sticky enable";
           }
         ];
+      };
+
+      floating = {
+        titlebar = true;
+        border = 0;
       };
 
       output = {
