@@ -49,7 +49,7 @@
           tooltip-format = "{ifname}";
           tooltip-format-wifi = "󰖩 {essid} ({signalStrength}%)";
           tooltip-format-disconnected = "Disconnected";
-          on-click = "${lib.getExe pkgs.nm-tray}";
+          on-click = "${lib.getExe pkgs.networkmanagerapplet}";
           max-length = 50;
           interval = 1;
         };
