@@ -111,6 +111,7 @@
     kdePackages.partitionmanager
     kdePackages.isoimagewriter
     waywall
+    networkmanagerapplet
     (glfw-wayland-minecraft.overrideAttrs (old: {
           patches = [
             (fetchpatch2 {
