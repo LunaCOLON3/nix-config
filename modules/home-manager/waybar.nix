@@ -14,9 +14,9 @@
         modules-center = [ "clock" "custom/media" ];
         modules-right = [ "pulseaudio" "network" "bluetooth" "clock#date" "custom/notification" ];
 
-        margin-top = 8;
-        margin-left = 8;
-        margin-right = 8;
+        margin-top = 10;
+        margin-left = 10;
+        margin-right = 10;
 
         spacing = 8;
 
@@ -121,7 +121,7 @@
     style = ''
       * {
         color: @text;
-        font-family: Noto Sans;
+        font-family: JetBrains Mono;
         font-size: 15;
       }
 
