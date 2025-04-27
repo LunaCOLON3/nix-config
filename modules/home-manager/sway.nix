@@ -29,8 +29,8 @@ in {
       bars = [];
 
       gaps = {
-        outer = 0;
-        inner = 10;
+        outer = -10;
+        inner = 20;
       };
 
       fonts = {
