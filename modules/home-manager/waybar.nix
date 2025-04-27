@@ -127,7 +127,7 @@
 
       window#waybar {
         background-color: alpha(@base, 0.5);
-        border: 2px solid @mantle;
+        border: 2px solid @pink;
       }
 
       .modules-left, .modules-center, .modules-right {
