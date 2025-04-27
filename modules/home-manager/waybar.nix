@@ -126,8 +126,8 @@
       }
 
       window#waybar {
-        background-color: @base;
-        border: 2px solid @crust;
+        background-color: alpha(@base, 0.85);
+        border: 2px solid @mantle;
       }
 
       .modules-left, .modules-center, .modules-right {
