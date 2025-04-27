@@ -161,6 +161,8 @@ in {
       blur enable
       blur_radius 5
       blur_passes 2
+
+      layer_effects "waybar" blur enable
     '';
   };
 
