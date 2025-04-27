@@ -67,7 +67,7 @@ in {
       };
 
       startup = [
-        { command = "autotiling"; }
+        { command = "autotiling -sw 0.85 -sr 1.61"; }
       ];
 
       keybindings = let
