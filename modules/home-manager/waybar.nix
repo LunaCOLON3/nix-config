@@ -126,7 +126,7 @@
       }
 
       window#waybar {
-        background-color: alpha(@base, 0.85);
+        background-color: alpha(@base, 0.5);
         border: 2px solid @mantle;
       }
 
