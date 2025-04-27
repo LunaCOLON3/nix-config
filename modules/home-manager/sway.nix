@@ -156,6 +156,12 @@ in {
         };
       };
     };
+
+    extraConfig = ''
+      blur enable
+      blur_radius 7
+      blur_passes 4
+    '';
   };
 
 }
