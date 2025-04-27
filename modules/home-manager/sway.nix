@@ -159,8 +159,8 @@ in {
 
     extraConfig = ''
       blur enable
-      blur_radius 7
-      blur_passes 4
+      blur_radius 5
+      blur_passes 2
     '';
   };
 
