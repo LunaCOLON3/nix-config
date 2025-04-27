@@ -111,7 +111,6 @@
     kdePackages.partitionmanager
     kdePackages.isoimagewriter
     waywall
-    nm-tray
     (glfw-wayland-minecraft.overrideAttrs (old: {
           patches = [
             (fetchpatch2 {
