@@ -38,6 +38,16 @@
       luasnip.enable = true;
       friendly-snippets.enable = true;
 
+      bufferline = {
+        enable = true;
+        settings.options.offsets = [{
+          filetype = "neo-tree";
+          text = "File Explorer";
+          highlight = "Directory";
+          text_align = "left";
+        }];
+      };
+
       neo-tree = {
         enable = true;
         closeIfLastWindow = true;
@@ -47,15 +57,6 @@
         enable = true;
         settings = {
           options.ignore_focus = [ "neo-tree" ];
-          tabline = {
-            lualine_a = [ "buffers" ];
-            lualine_b = [];
-            lualine_c = [];
-            lualine_x = [];
-            lualine_y = [];
-            lualine_z = [];
-          };
-
           extensions = [ "neo-tree" ];
         };
       };
