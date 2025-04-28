@@ -46,7 +46,6 @@
       lualine = {
         enable = true;
         settings = {
-          ignore_focus = [ "neo-tree" ];
           tabline = {
             lualine_a = [ "buffers" ];
             lualine_b = [];
@@ -55,6 +54,8 @@
             lualine_y = [];
             lualine_z = [];
           };
+
+          extensions = [ "neo-tree" ];
         };
       };
 
