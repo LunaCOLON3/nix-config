@@ -53,7 +53,7 @@
             lualine_c = [];
             lualine_x = [];
             lualine_y = [];
-            lualine_z = [ "tabs"];
+            lualine_z = [];
           };
         };
       };
