@@ -55,6 +55,12 @@
     }
   ];
 
+  wayland.windowManager.sway.config = {
+    startup = [
+      { command = "autotiling"; }
+    ];
+  };
+
   programs.btop.enable = true;
 
   services.syncthing.enable = true;
