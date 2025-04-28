@@ -10,7 +10,17 @@
     clipboard.providers.wl-copy.enable = true;
     colorschemes.catppuccin = {
       enable = true;
-      settings.transparent_background = true;
+      settings = {
+        transparent_background = true;
+        show_end_of_buffer = false;
+        no_italic = true;
+
+        dim_inactive = {
+          enabled = true;
+          shade = "dark";
+          percentage = 0.15;
+        };
+      };
     };
 
     opts = {
@@ -40,12 +50,24 @@
 
       bufferline = {
         enable = true;
-        settings.options.offsets = [{
-          filetype = "neo-tree";
-          text = "File Explorer";
-          highlight = "Directory";
-          text_align = "left";
-        }];
+        
+        settings = {
+          options = {
+            mode = "buffers";
+            separator_style = "thick";
+            show_tab_indicators = false;
+            indicator = { style = "none"; };
+
+            offsets = [{
+              filetype = "neo-tree";
+              text = "File Explorer";
+              highlight = "Directory";
+              text_align = "left";
+            }];
+          };
+
+          highlights.__raw = ''require("catppuccin.groups.integrations.bufferline").get()'';
+        };
       };
 
       neo-tree = {
