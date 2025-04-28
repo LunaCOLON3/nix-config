@@ -46,6 +46,7 @@
       lualine = {
         enable = true;
         settings = {
+          options.ignore_focus = [ "neo-tree" ];
           tabline = {
             lualine_a = [ "buffers" ];
             lualine_b = [];
