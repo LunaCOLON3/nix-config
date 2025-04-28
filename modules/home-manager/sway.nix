@@ -76,7 +76,9 @@ in {
       };
 
       startup = [
-        { command = "autotiling -sw 0.85 -sr 1.61"; }
+        { command = "autotiling -w 1 -sw 0.85 -sr 1.61"; }
+        { command = "autotiling -w 2 -sr 2"; }
+        { command = "autotiling -w 3"; }
       ];
 
       keybindings = let
