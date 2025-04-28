@@ -32,17 +32,30 @@
     };
 
     plugins = {
-      lualine.enable = true;
       web-devicons.enable = true;
       intellitab.enable = true;
       treesitter.enable = true;
       luasnip.enable = true;
       friendly-snippets.enable = true;
-      bufferline.enable = true;
 
       neo-tree = {
         enable = true;
         closeIfLastWindow = true;
+      };
+
+      lualine = {
+        enable = true;
+        settings = {
+          ignore_focus = [ "neo-tree" ];
+          tabline = {
+            lualine_a = [ "buffers" ];
+            lualine_b = [ "branch"];
+            lualine_c = [ "filename"];
+            lualine_x = [];
+            lualine_y = [];
+            lualine_z = [ "tabs"];
+          };
+        };
       };
 
       cmp = {
