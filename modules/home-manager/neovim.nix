@@ -33,12 +33,17 @@
 
     plugins = {
       lualine.enable = true;
-      neo-tree.enable = true;
       web-devicons.enable = true;
       intellitab.enable = true;
       treesitter.enable = true;
       luasnip.enable = true;
       friendly-snippets.enable = true;
+      bufferline.enable = true;
+
+      neo-tree = {
+        enable = true;
+        closeIfLastWindow = true;
+      };
 
       cmp = {
         enable = true;
