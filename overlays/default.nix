@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }: {
+{ inputs, ... }: {
 
   nur = inputs.nur.overlays.default;
 
@@ -17,7 +17,7 @@
 
     glfw3-minecraft = prev.glfw3-minecraft.overrideAttrs (old: {
       patches = (old.patches or []) ++ [
-        (pkgs.fetchpatch2 {
+        (prev.fetchpatch2 {
           url = "https://raw.githubusercontent.com/tesselslate/waywall/be3e018bb5f7c25610da73cc320233a26dfce948/contrib/glfw.patch";
           hash = "sha256-0w8hpv0zclg42yy1l5rg1yz5hfn4r5q8gbhl7h1fwlazhlaw6pcj=";
         })
