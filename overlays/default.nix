@@ -15,7 +15,7 @@
 
   prismlauncher = final: prev: {
 
-    glfw3-minecraft = prev.glfw3-minecraft.overrideAttrs (old: {
+    glfw3-minecraft = prev.glfw3.overrideAttrs (old: {
       patches = (old.patches or []) ++ [
         (prev.fetchpatch2 {
           url = "https://raw.githubusercontent.com/tesselslate/waywall/be3e018bb5f7c25610da73cc320233a26dfce948/contrib/glfw.patch";
