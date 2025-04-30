@@ -2,6 +2,8 @@
 
   nur = inputs.nur.overlays.default;
 
+  additions = final: prev: import ../pkgs prev;
+
   stable = final: prev: {
     stable = import inputs.nixpkgs-stable {
       system = "x86_64-linux";
