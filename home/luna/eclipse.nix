@@ -45,6 +45,7 @@
     itch
     noto-fonts
     inkscape
+    ninjabrain-bot
   ];
 
   fonts.fontconfig = {

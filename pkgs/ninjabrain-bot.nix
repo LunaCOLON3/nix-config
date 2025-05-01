@@ -6,6 +6,7 @@
   maven,
   libxkbcommon,
   xorg,
+  ...
 }:
 
 maven.buildMavenPackage rec {
@@ -30,11 +31,11 @@ maven.buildMavenPackage rec {
     runHook preInstall
 
     mkdir -p $out/bin $out/share/ninjabrain-bot
-    install -Dm644 target/ninjabrain-bot-${version}.jar $out/share/ninjabrain-bot
+    install -Dm644 target/ninjabrainbot-${version}-jar-with-dependencies.jar $out/share/ninjabrain-bot
 
     makeWrapper ${jre}/bin/java $out/bin/ninjabrain-bot \
       --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath [ libxkbcommon xorg.libX11 xorg.libXt ]}" \
-      --add-flags "-jar $out/share/ninjabrain-bot/Ninjabrain-Bot-${version}.jar"
+      --add-flags "-jar $out/share/ninjabrain-bot/ninjabrainbot-${version}-jar-with-dependencies.jar"
 
     runHook postInstall
   '';
