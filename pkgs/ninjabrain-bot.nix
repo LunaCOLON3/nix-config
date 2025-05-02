@@ -6,6 +6,7 @@
   maven,
   libxkbcommon,
   xorg,
+  fetchpatch2,
   ...
 }:
 
@@ -26,6 +27,12 @@ maven.buildMavenPackage rec {
   mvnParameters = "assembly:single -DskipTests=true";
 
   nativeBuildInputs = [ makeWrapper ];
+
+  patches = [
+    (fetchpatch2 {
+      url = "https://gist.githubusercontent.com/LunaCOLON3/186886d607fc7f35daeb840ecd9ef5e3/raw/526b92c15cd744178b296cfbe694ae7b574630bc/0001-force-disable-splash-screen.patch";
+    })
+  ];
 
   installPhase = ''
     runHook preInstall
