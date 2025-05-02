@@ -1,12 +1,11 @@
 {
   lib,
   fetchFromGitHub,
-  jre,
+  jre8,
   makeWrapper,
   maven,
   libxkbcommon,
   xorg,
-  fetchpatch2,
   ...
 }:
 
@@ -28,19 +27,13 @@ maven.buildMavenPackage rec {
 
   nativeBuildInputs = [ makeWrapper ];
 
-  patches = [
-    (fetchpatch2 {
-      url = "https://gist.githubusercontent.com/LunaCOLON3/186886d607fc7f35daeb840ecd9ef5e3/raw/5ef7b705173ab0a8e8c910c1009794c51bd1ff60/0001-force-disable-splash-screen.patch";
-    })
-  ];
-
   installPhase = ''
     runHook preInstall
 
     mkdir -p $out/bin $out/share/ninjabrain-bot
     install -Dm644 target/ninjabrainbot-${version}-jar-with-dependencies.jar $out/share/ninjabrain-bot
 
-    makeWrapper ${jre}/bin/java $out/bin/ninjabrain-bot \
+    makeWrapper ${jre8}/bin/java $out/bin/ninjabrain-bot \
       --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath [ libxkbcommon xorg.libX11 xorg.libXt ]}" \
       --add-flags "-jar $out/share/ninjabrain-bot/ninjabrainbot-${version}-jar-with-dependencies.jar"
 
