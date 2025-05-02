@@ -30,7 +30,7 @@ maven.buildMavenPackage rec {
 
   patches = [
     (fetchpatch2 {
-      url = "https://gist.githubusercontent.com/LunaCOLON3/186886d607fc7f35daeb840ecd9ef5e3/raw/526b92c15cd744178b296cfbe694ae7b574630bc/0001-force-disable-splash-screen.patch";
+      url = "https://gist.githubusercontent.com/LunaCOLON3/186886d607fc7f35daeb840ecd9ef5e3/raw/5ef7b705173ab0a8e8c910c1009794c51bd1ff60/0001-force-disable-splash-screen.patch";
     })
   ];
 
