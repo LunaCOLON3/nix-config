@@ -20,6 +20,10 @@
           shade = "dark";
           percentage = 0.15;
         };
+
+        custom_highlights = {
+          Variable = { fg = "#b4befe"; };
+        };
       };
     };
 
@@ -43,10 +47,12 @@
 
     plugins = {
       web-devicons.enable = true;
-      intellitab.enable = true;
       treesitter.enable = true;
       luasnip.enable = true;
       friendly-snippets.enable = true;
+      indent-blankline.enable = true;
+      rainbow-delimiters.enable = true;
+      intellitab.enable = true;
 
       bufferline = {
         enable = true;
