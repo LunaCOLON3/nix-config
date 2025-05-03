@@ -21,9 +21,13 @@
           percentage = 0.15;
         };
 
-        custom_highlights = {
-          Variable = { fg = "#b4befe"; };
-        };
+        custom_highlights = ''
+                  function(colors)
+                  return{
+          Variable = {fg = colors.teal},
+          }
+          end
+        '';
       };
     };
 

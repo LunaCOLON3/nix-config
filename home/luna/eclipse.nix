@@ -47,6 +47,7 @@
     inkscape
     ninjabrain-bot
     kdePackages.kruler
+    piper
   ];
 
   fonts.fontconfig = {

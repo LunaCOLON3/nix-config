@@ -69,6 +69,8 @@
       };
     };
 
+    ratbagd.enable = true;
+
     flatpak.enable = true;
     printing.enable = true;
     hardware.openrgb.enable = true;
