@@ -68,6 +68,13 @@ in {
         border = 0;
       };
 
+      input = {
+        "type:pointer" = {
+          accel_profile = "flat";
+          pointer_accel = "-0.5";
+        };
+      };
+
       output = {
         "*" = {
           background = "${wallpaper} fill";
