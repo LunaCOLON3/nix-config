@@ -46,6 +46,7 @@
     noto-fonts
     inkscape
     ninjabrain-bot
+    kdePackages.kruler
   ];
 
   fonts.fontconfig = {
