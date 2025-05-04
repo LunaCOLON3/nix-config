@@ -57,7 +57,6 @@
       indent-blankline.enable = true;
       rainbow-delimiters.enable = true;
       intellitab.enable = true;
-      telescope.enable = true;
 
       bufferline = {
         enable = true;
@@ -105,11 +104,7 @@
         ];
 
         settings.mapping = {
-          "<C-Space>" = "cmp.mapping.complete()";
-          "<C-d>" = "cmp.mapping.scroll_docs(-4)";
-          "<C-e>" = "cmp.mapping.close()";
-          "<C-f>" = "cmp.mapping.scroll_docs(4)";
-          "<CR>" = "cmp.mapping.confirm({ select = true })";
+          "<C-f>" = "cmp.mapping.complete()";
           "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
           "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
         };
@@ -130,6 +125,30 @@
           pyright.enable = true;
           tailwindcss.enable = true;
           ts_ls.enable = true;
+        };
+      };
+
+      telescope = {
+        enable = true;
+
+        extensions = {
+          fzf-native.enable = true;
+          ui-select.enable = true;
+        };
+
+        keymaps = {
+          "<leader>ff" = {
+            action = "find_files";
+            options.desc = "Find project files";
+          };
+          "<leader>gc" = {
+            action = "git_commits";
+            options.desc = "Commits";
+          };
+          "<leader>mp" = {
+            action = "man_pages";
+            options.desc = "Man Pages";
+          };
         };
       };
     };
