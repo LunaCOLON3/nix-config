@@ -136,20 +136,26 @@
           ui-select.enable = true;
         };
 
-        keymaps = {
-          "<leader>ff" = {
+        keymaps = [
+          {
+            key = "<leader>ff";
+            mode = "n";
             action = "find_files";
-            options.desc = "Find project files";
-          };
-          "<leader>gc" = {
+            options.desc = "Find Files";
+          }
+          {
+            key = "<leader>gc";
+            mode = "n";
             action = "git_commits";
             options.desc = "Commits";
-          };
-          "<leader>mp" = {
+          }
+          {
+            key = "<leader>mp";
+            mode = "n";
             action = "man_pages";
             options.desc = "Man Pages";
-          };
-        };
+          }
+        ];
       };
     };
   };
