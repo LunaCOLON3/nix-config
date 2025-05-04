@@ -137,18 +137,9 @@
         };
 
         keymaps = {
-          "<leader>ff" = {
-            action = "find_files";
-            options.desc = "Find project files";
-          };
-          "<leader>gc" = {
-            action = "git_commits";
-            options.desc = "Commits";
-          };
-          "<leader>mp" = {
-            action = "man_pages";
-            options.desc = "Man Pages";
-          };
+          "<leader>ff" = "find_files";
+          "<leader>gc" = "git_commits";
+          "<leader>mp" = "man_pages";
         };
       };
     };
