@@ -57,6 +57,7 @@
       indent-blankline.enable = true;
       rainbow-delimiters.enable = true;
       intellitab.enable = true;
+      telescope.enable = true;
 
       bufferline = {
         enable = true;
