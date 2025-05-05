@@ -48,6 +48,7 @@
     ninjabrain-bot
     kdePackages.kruler
     piper
+    tldr
   ];
 
   fonts.fontconfig = {
