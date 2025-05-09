@@ -49,6 +49,7 @@
     kdePackages.kruler
     piper
     tldr
+    dune3d
   ];
 
   fonts.fontconfig = {
