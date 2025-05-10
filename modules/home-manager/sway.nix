@@ -60,6 +60,10 @@ in {
             criteria.title = "Picture-in-Picture";
             command = "floating enable; sticky enable";
           }
+          {
+            criteria.instance = "Godot_Engine";
+            command = "floating enable";
+          }
         ];
       };
 
