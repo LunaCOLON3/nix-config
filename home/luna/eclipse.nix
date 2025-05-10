@@ -49,7 +49,7 @@
     kdePackages.kruler
     piper
     tldr
-    dune3d
+    godot
   ];
 
   fonts.fontconfig = {
