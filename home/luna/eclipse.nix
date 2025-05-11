@@ -50,7 +50,7 @@
     piper
     tldr
     godot
-    sfxr-qt
+    sfxr
   ];
 
   fonts.fontconfig = {
