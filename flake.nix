@@ -89,12 +89,12 @@
       };
       "luna@phobos" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = { inherit inputs; };
+        extraSpecialArgs = { inherit inputs rootPath; };
         modules = [ ./home/luna/phobos.nix ];
       };
       "luna@deimos" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = { inherit inputs; };
+        extraSpecialArgs = { inherit inputs rootPath; };
         modules = [ ./home/luna/deimos.nix ];
       };
     };
