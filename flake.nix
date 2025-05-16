@@ -71,12 +71,12 @@
       };
 
       phobos = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
+        specialArgs = {inherit inputs rootPath;};
         modules = [ ./hosts/phobos/configuration.nix ];
       };
 
       deimos = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
+        specialArgs = {inherit inputs rootPath;};
         modules = [ ./hosts/deimos/configuration.nix ];
       };
     };
