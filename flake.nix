@@ -74,6 +74,11 @@
         specialArgs = {inherit inputs;};
         modules = [ ./hosts/phobos/configuration.nix ];
       };
+
+      deimos = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [ ./hosts/deimos/configuration.nix ];
+      };
     };
 
     homeConfigurations = {
@@ -86,6 +91,11 @@
         inherit pkgs;
         extraSpecialArgs = { inherit inputs; };
         modules = [ ./home/luna/phobos.nix ];
+      };
+      "luna@deimos" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = { inherit inputs; };
+        modules = [ ./home/luna/deimos.nix ];
       };
     };
 
