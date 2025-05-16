@@ -51,6 +51,7 @@
     tldr
     godot
     sfxr
+    obsidian
   ];
 
   fonts.fontconfig = {
