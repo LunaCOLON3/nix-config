@@ -22,7 +22,7 @@
   ;
 
   networking = {
-    hostName = "phobos";
+    hostName = "deimos";
     networkmanager.enable = true;
   };
 
