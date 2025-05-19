@@ -50,6 +50,8 @@
   security.rtkit.enable = true;
 
   services = {
+    upower.enable = true;
+
     xserver = {
       enable = true;
     };
