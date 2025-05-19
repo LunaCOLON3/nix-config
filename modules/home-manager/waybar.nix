@@ -12,7 +12,7 @@
       mainBar = {
         modules-left = [ "sway/workspaces" "sway/window" ];
         modules-center = [ "clock" "custom/media" ];
-        modules-right = [ "pulseaudio" "network" "bluetooth" "clock#date" "custom/notification" ];
+        modules-right = [ "pulseaudio" "network" "bluetooth" "clock#date" "custom/notification" "battery" ];
 
         margin-top = 10;
         margin-left = 10;
