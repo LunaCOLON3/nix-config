@@ -52,6 +52,7 @@
     godot
     sfxr
     obsidian
+    audacity
   ];
 
   fonts.fontconfig = {
