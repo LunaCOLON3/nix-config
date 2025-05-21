@@ -39,6 +39,7 @@
     kdePackages.ark
     vlc
     itch
+    obsidian
   ];
 
   fonts.fontconfig = {
