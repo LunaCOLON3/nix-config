@@ -103,8 +103,6 @@
     };
   };
 
-  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-wlr];
-
   environment.systemPackages = with pkgs; [
     home-manager
     kitty
