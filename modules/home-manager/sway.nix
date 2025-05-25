@@ -185,6 +185,9 @@ in {
       blur_passes 2
 
       layer_effects "waybar" blur enable
+
+      exec systemctl --user import-environment XDG_SESSION_TYPE XDG_CURRENT_DESKTOP
+      exec dbus-update-activation-environment WAYLAND_DISPLAY
     '';
   };
 

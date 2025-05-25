@@ -9,17 +9,13 @@
   };
 
   xdg = {
-  portal = {
-    enable = true;
-    extraPortals = with pkgs; [
-      # wlroots specific
-      # use xdg-desktop-portal-gtk for gnome.
-      xdg-desktop-portal-wlr
-    ];
-    # uncomment for gnome
-    # gtkUsePortal = true;
+    portal = {
+      enable = true;
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-wlr
+      ];
+    };
   };
-};
 
 xdg.portal.wlr.settings = {
   screencast = {
