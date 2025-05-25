@@ -13,12 +13,14 @@
 
     shellAliases = {
       icat = "kitten icat";
-    };
 
-    shellAbbrs = {
       vi = "nvim";
       vim = "nvim";
 
+      gr = "cd $(git rev-parse --show-toplevel)";
+    };
+
+    shellAbbrs = {
       g = "git";
     };
 
