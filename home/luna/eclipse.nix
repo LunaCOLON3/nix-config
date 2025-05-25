@@ -125,6 +125,10 @@
     ];
   };
 
+  gtk = {
+    enable = true;
+  };
+
   programs.btop.enable = true;
 
   services.syncthing.enable = true;
