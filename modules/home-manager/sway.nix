@@ -100,7 +100,7 @@ in {
         lib.mkMerge (
           [
             (mkExec "${mod}+q" swayCfg.terminal)
-            (mkExec "${mod}" swayCfg.menu)
+            (mkExec "${mod}+r" swayCfg.menu)
             (mkExec "${mod}+e" "dolphin")
             (mkExec "${mod}+f" "zen")
 
