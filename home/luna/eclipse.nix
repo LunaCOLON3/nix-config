@@ -52,6 +52,7 @@
     godot
     sfxr
     obsidian
+    audacity
   ];
 
   fonts.fontconfig = {
@@ -122,6 +123,10 @@
         output = "DP-1";
       }
     ];
+  };
+
+  gtk = {
+    enable = true;
   };
 
   programs.btop.enable = true;

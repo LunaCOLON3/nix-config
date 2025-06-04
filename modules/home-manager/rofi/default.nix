@@ -1,13 +1,13 @@
 { pkgs, ... }: {
 
-  home.file.".config/rofi/themes/catppuccin-mocha.rasi".source = ./catppuccin-mocha.rasi;
+  home.file.".config/rofi/themes/catppuccin.rasi".source = ./catppuccin.rasi;
   
   catppuccin.rofi.enable = false;
 
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
-    theme = ./catppuccin-default.rasi;
+    theme = ./theme.rasi;
 
     extraConfig = {
       modi = "drun";

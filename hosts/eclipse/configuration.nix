@@ -111,7 +111,7 @@
     hyprpolkitagent
     fbset
     kdePackages.partitionmanager
-    kdePackages.isoimagewriter
+    impression
     waywall
     networkmanagerapplet
     (glfw-wayland-minecraft.overrideAttrs (old: {
