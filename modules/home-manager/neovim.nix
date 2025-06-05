@@ -64,7 +64,7 @@
         settings = {
           options = {
             mode = "tabs";
-            separator_style = "thick";
+            separator_style = "thin";
             show_tab_indicators = false;
             indicator = { style = "none"; };
 
