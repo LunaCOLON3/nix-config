@@ -57,38 +57,19 @@
       indent-blankline.enable = true;
       rainbow-delimiters.enable = true;
       intellitab.enable = true;
-
-      bufferline = {
-        enable = true;
-        
-        settings = {
-          options = {
-            mode = "tabs";
-            separator_style = "thin";
-            indicator.style = "underline";
-
-            offsets = [{
-              filetype = "neo-tree";
-              text = "File Explorer";
-              highlight = "Directory";
-              text_align = "left";
-            }];
-          };
-
-          highlights.__raw = ''require("catppuccin.groups.integrations.bufferline").get()'';
-        };
-      };
-
-      neo-tree = {
-        enable = true;
-        closeIfLastWindow = true;
-      };
+      nvim-tree.enable = true;
 
       lualine = {
         enable = true;
         settings = {
-          options.ignore_focus = [ "neo-tree" ];
-          extensions = [ "neo-tree" ];
+          options = {
+            disabled_filetypes = [ "NvimTree" ];
+          };
+
+          tabline = {
+            lualine_a = [ "buffers" ];
+            lualine_z = [ "tabs" ];
+          };
         };
       };
 
@@ -136,9 +117,9 @@
         };
 
         keymaps = {
-          "<leader>ff" = "find_files";
-          "<leader>gc" = "git_commits";
-          "<leader>mp" = "man_pages";
+          "ff" = "find_files";
+          "gc" = "git_commits";
+          "mp" = "man_pages";
         };
       };
     };
