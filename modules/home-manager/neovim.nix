@@ -63,7 +63,7 @@
         
         settings = {
           options = {
-            mode = "buffers";
+            mode = "tabs";
             separator_style = "thick";
             show_tab_indicators = false;
             indicator = { style = "none"; };
