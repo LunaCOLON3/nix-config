@@ -124,7 +124,7 @@ in {
           ++ (lib.singleton {
             "${mod}+c" = "kill";
 
-            "${mod}+t" = "layout toggle split";
+            "${mod}+t" = "layout toggle tabbed split";
 
             "${mod}+Shift+f" = "fullscreen toggle";
 

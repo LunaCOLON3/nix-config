@@ -15,12 +15,6 @@
         show_end_of_buffer = false;
         no_italic = true;
 
-        dim_inactive = {
-          enabled = true;
-          shade = "dark";
-          percentage = 0.15;
-        };
-
         custom_highlights = ''
                   function(colors)
                   return{
@@ -57,15 +51,11 @@
       indent-blankline.enable = true;
       rainbow-delimiters.enable = true;
       intellitab.enable = true;
-      nvim-tree.enable = true;
+      autoclose.enable = true;
 
       lualine = {
         enable = true;
         settings = {
-          options = {
-            disabled_filetypes = [ "NvimTree" ];
-          };
-
           tabline = {
             lualine_a = [ "buffers" ];
             lualine_z = [ "tabs" ];

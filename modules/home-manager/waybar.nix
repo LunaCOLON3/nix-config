@@ -9,43 +9,40 @@
     };
 
     settings = {
+
       mainBar = {
         modules-left = [ "sway/workspaces" "sway/window" ];
-        modules-center = [ "clock" "custom/media" ];
-        modules-right = [ "pulseaudio" "network" "bluetooth" "clock#date" "custom/notification" "battery" ];
+        modules-center = [ "clock" ];
+        modules-right = [ "tray" "network" "bluetooth" "battery" "pulseaudio" "custom/notification" ];
 
         margin-top = 10;
         margin-left = 10;
         margin-right = 10;
 
-        spacing = 8;
-
         "sway/workspaces" = {
           disable-scroll = true;
           all-outputs = false;
-          format = "{icon}";
-          format-icons = {
-            "1" = ""; # this is not a material design circle like the other icons
-            "2" = "󰝤";
-            "3" = "󰔶";
-            "4" = "󰇮";
-            "5" = "󰍩";
-          };
+        };
+
+        "sway/window" = {
+          max-length = 50;
+          all-outputs = true;
         };
 
         pulseaudio = {
-          format = "󰕾 {volume}%";
-          format-muted = "󰖁 Muted";
+          format = "󰕾";
+          format-muted = "󰖁";
+          tooltip-format = "{volume}%";
+          tooltip-format-muted = "Muted";
           scroll-step = 5;
           on-click = "${lib.getExe pkgs.lxqt.pavucontrol-qt} -t 3";
-          tooltip = false;
         };
 
         network = {
-          format = "{ifname}";
-          format-wifi = "󰖩  {essid}";
+          format = "";
+          format-wifi = "󰖩";
           format-ethernet = "";
-          format-disconnected = "󰅤 disconnected";
+          format-disconnected = "󰅤";
           tooltip-format = "{ifname}";
           tooltip-format-wifi = "󰖩 {essid} ({signalStrength}%)";
           tooltip-format-disconnected = "Disconnected";
@@ -56,8 +53,7 @@
 
         bluetooth = {
           format = "";
-          format-connected = " {device_alias}";
-          format-connected-battery = " {device_alias} {device_battery_percentage}%";
+          format-connected = "<span foreground='blue'><sup></sup></span>";
           tooltip-format = "{controller_alias}\t{controller_address}\n\n{num_connections} connected";
           tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}";
           tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
@@ -67,29 +63,24 @@
         };
 
         clock = {
-          format = "{:%I:%M %p}";
+          format = "{:%I:%M %p - %D}";
           interval = 1;
           locale = "en_US.UTF-8";
           timezone = "America/Los_Angeles";
-        };
-
-        "clock#date" = {
-          format = "{:%a, %b %d, %Y}";
-          interval = 1;
         };
 
         "custom/notification" = {
           tooltip = false;
           format = "{icon}";
           format-icons = {
-            notification = " <span foreground='red'><sup></sup></span> ";
-            none = " ";
-            dnd-notification = " <span foreground='red'><sup></sup></span> ";
-            dnd-none = " ";
-            inhibited-notification = " <span foreground='red'><sup></sup></span> ";
-            inhibited-none = " ";
-            dnd-inhibited-notification = " <span foreground='red'><sup></sup></span> ";
-            dnd-inhibited-none = " ";
+            notification = "<span foreground='red'><sup></sup></span>";
+            none = "";
+            dnd-notification = "<span foreground='red'><sup></sup></span>";
+            dnd-none = "";
+            inhibited-notification = "<span foreground='red'><sup></sup></span>";
+            inhibited-none = "";
+            dnd-inhibited-notification = "<span foreground='red'><sup></sup></span>";
+            dnd-inhibited-none = "";
           };
           return-type = "json";
           exec-if = "which ${pkgs.swaynotificationcenter}/bin/swaync-client";
@@ -102,8 +93,8 @@
         "custom/media" = {
           format = "{icon} {}";
           format-icons = {
-            spotify = " ";
-            default = " ";
+            spotify = "";
+            default = "";
           };
           escape= true;
           return-type = "json";
@@ -121,40 +112,30 @@
     style = ''
       * {
         color: @text;
-        font-family: JetBrains Mono;
-        font-size: 15;
+        font-family: JetBrains Mono Nerd Font Propo;
+        font-size: 11pt;
+        border-radius: 0px;
+        padding: 0px;
       }
 
       window#waybar {
-        background-color: alpha(@base, 0.5);
-        border: 2px solid @mantle;
-      }
-
-      .modules-left, .modules-center, .modules-right {
-        margin-right: 8px;
-        margin-left: 8px;
-      }
-
-      #workspaces {
-        margin-left: 0;
-      }
-
-      #workspaces button {
+        background-color: transparent;
         border: none;
-        background-color: transparent;
-        box-shadow: none;
-        border-radius: 16px;
-        transition: background-color 100ms ease, color 100ms ease;
-
-        min-width: 32px;
-        min-height: 32px;
-        padding: 0;
-        font-weight: normal;
       }
 
-      #workspaces button:hover {
-        background-image: none;
-        background-color: transparent;
+      #battery,
+      #network,
+      #clock,
+      #custom-media,
+      #custom-notification,
+      #window,
+      #tray,
+      #workspaces,
+      #pulseaudio,
+      #bluetooth {
+        margin: 6px;
+        background-color: @base;
+        border: 2px solid @mantle;
       }
     '';
   };
