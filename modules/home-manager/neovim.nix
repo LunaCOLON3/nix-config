@@ -65,8 +65,7 @@
           options = {
             mode = "tabs";
             separator_style = "thin";
-            show_tab_indicators = false;
-            indicator = { style = "none"; };
+            indicator.style = "underline";
 
             offsets = [{
               filetype = "neo-tree";
