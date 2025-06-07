@@ -44,7 +44,7 @@
           format-ethernet = "";
           format-disconnected = "󰅤";
           tooltip-format = "{ifname}";
-          tooltip-format-wifi = "󰖩 {essid} ({signalStrength}%)";
+          tooltip-format-wifi = "{essid} ({signalStrength}%)";
           tooltip-format-disconnected = "Disconnected";
           on-click = "${pkgs.networkmanagerapplet}/bin/nm-connection-editor";
           max-length = 50;
@@ -73,14 +73,14 @@
           tooltip = false;
           format = "{icon}";
           format-icons = {
-            notification = "<span foreground='red'><sup></sup></span>";
-            none = "";
-            dnd-notification = "<span foreground='red'><sup></sup></span>";
-            dnd-none = "";
-            inhibited-notification = "<span foreground='red'><sup></sup></span>";
-            inhibited-none = "";
+            notification = "󱅫";
+            none = "󰂚";
+            dnd-notification = "󱅫";
+            dnd-none = "󰂛";
+            inhibited-notification = "󱅫";
+            inhibited-none = "󰂚";
             dnd-inhibited-notification = "<span foreground='red'><sup></sup></span>";
-            dnd-inhibited-none = "";
+            dnd-inhibited-none = "󰂛";
           };
           return-type = "json";
           exec-if = "which ${pkgs.swaynotificationcenter}/bin/swaync-client";
@@ -112,7 +112,7 @@
     style = ''
       * {
         color: @text;
-        font-family: JetBrains Mono Nerd Font Propo;
+        font-family: JetBrains Mono Nerd Font;
         font-size: 11pt;
         border-radius: 0px;
         padding: 0px;

@@ -38,8 +38,8 @@
     keepassxc
     any-nix-shell
     (stable.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-    kdePackages.dolphin
-    kdePackages.ark
+    nemo
+    file-roller
     kdePackages.kdenlive
     vlc
     itch
@@ -124,6 +124,8 @@
       }
     ];
   };
+
+  catppuccin.gtk.enable = true;
 
   gtk = {
     enable = true;
