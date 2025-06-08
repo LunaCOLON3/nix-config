@@ -141,6 +141,14 @@
       #bluetooth {
         margin: 6px;
       }
+
+      #custom-nixos {
+        margin-left: 12px
+      }
+
+      #custom-notification {
+        margin-right: 12px
+      }
     '';
   };
 
