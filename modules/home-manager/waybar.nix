@@ -11,7 +11,7 @@
     settings = {
 
       mainBar = {
-        modules-left = [ "sway/workspaces" "sway/window" ];
+        modules-left = [ "custom/nixos" "sway/workspaces" "sway/window" ];
         modules-center = [ "clock" ];
         modules-right = [ "tray" "network" "bluetooth" "battery" "pulseaudio" "custom/notification" ];
 
@@ -106,6 +106,11 @@
           on-scroll-down = "playerctl previous";
           exec = "waybar-mediaplayer.py 2> /dev/null";
         };
+
+        "custom/nixos" = {
+          format = "";
+          tooltip = false;
+        };
       };
     };
 
@@ -119,8 +124,8 @@
       }
 
       window#waybar {
-        background-color: transparent;
-        border: none;
+        background-color: @base;
+        border: 2px solid @mantle;
       }
 
       #battery,
@@ -132,10 +137,9 @@
       #tray,
       #workspaces,
       #pulseaudio,
+      #custom-nixos,
       #bluetooth {
         margin: 6px;
-        background-color: @base;
-        border: 2px solid @mantle;
       }
     '';
   };
